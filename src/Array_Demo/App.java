@@ -22,3 +22,5 @@ public class App
         arr3[2] = new Customer(); // Customer class object's reference accepted
     }
 }
+
+// Conclusion: In specific case of reference variables, an array can be homogenous and heterogeneous as well.
