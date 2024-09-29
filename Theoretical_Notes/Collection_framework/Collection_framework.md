@@ -17,12 +17,12 @@
 + It helps in managing (storing/processing) data efficiently.
 + If a program is creating the multiple objects from same class then array is better option.
 + If that object is storing data (and not part of UI) and object's total creation quantity is unknown, then collection framework is to be considered.
-+ Collection framework's purupose is to store/manage the obejct's reference, in other words, to store/manage objects in memory.
++ Collection framework's purpose is to store/manage the obejct's reference, in other words, to store/manage objects in memory.
 + Data-objects are created during runtime on demand.
 + Array-objects are also created during runtime, but these are already created in starting of a loop.
 
 + Object's management by collection framework includes:
-  + Keeping objcts (Object's reference)
+  + Keeping objects (Object's reference)
   + Removing objects (Object's reference)
   + Iterating objects (Object's reference)
   + Sorting objects (Object's reference)
