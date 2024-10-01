@@ -1,5 +1,7 @@
 # SQL (Structured Query Language) BASICS
 
++ 'SQL' stands for Structured Query Language.
++ It is not a case-sensitive language.
 + Queries can be created for database server by using 'SQL'.
 + These queries will be executed by database server(s) (like, mySql, Oracle, etc).
 
