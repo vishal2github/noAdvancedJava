@@ -19,11 +19,15 @@ OUTPUT:
 <hr>
 
 ```
-COMMAND: create database db1;
-RESULT: New database 'db1' has been created.
+COMMAND: system cls; or system cls
+RESULT: Cleared screen.
+```
 
-OUTPUT:
-Query OK, 1 row affected (0.02 sec)
+<hr>
+
+```
+COMMAND: exit or exit;
+RESULT: Exit CLI.
 ```
 
 <hr>
