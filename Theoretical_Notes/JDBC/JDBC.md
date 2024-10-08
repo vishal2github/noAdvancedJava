@@ -18,7 +18,7 @@
 
 <br>
 
-### JDBC steps
+### **JDBC steps**
 
 + Loading driver class
 + Creating connection object
@@ -28,7 +28,7 @@
 
 <br>
 
-### Driver class
+### **Driver class**
 
 + It is implementation of 'java.sql.Driver' interface.
 
@@ -50,4 +50,3 @@
 
 + **Remember:** Every driver class has a special feature which is as follows:
   + "Every driver class creates an object of itself and gives reference of that object to the 'DriverManger' class on loading."
-
