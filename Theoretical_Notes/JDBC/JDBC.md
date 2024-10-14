@@ -50,3 +50,32 @@
 
 + **Remember:** Every driver class has a special feature which is as follows:
   + "Every driver class creates an object of itself and gives reference of that object to the 'DriverManger' class on loading."
+
+<br>
+
+### **Creating statement object**
+
++ In order to execute SQL queries, program will call methods of the following interfaces:
+  + Statement interface
+  + PreparedStatement interface
+  + etc...
+
++ Object of these interfaces is called statement object.
+
+<br>
+
+### **Statement interface**
+
++ Program will call methods of this interface to execute static SQL queries (non-parameterized queries), i.e., the queries that don't require the user input.
+
++ Few methods under 'statement interface' are:
+  + public boolean execute(String query) **_(Call to execute SQL DDL query)_**
+  + public int executeUpdate(String query) **_(Call to execute SQL DML non-parameterized query)_**
+  + public ResultSet executeQuery(String query) **_(Call to execute SQL DQL non-parameterized query)_**
+  + etc...
+
+```
+  STATEMENT INTERFACE SYNTAX:
+  
+    Statement st = cn.createStatement();
+```
