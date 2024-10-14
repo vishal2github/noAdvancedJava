@@ -66,7 +66,7 @@
 
 ### **Statement interface**
 
-+ Program will call methods of this interface to execute static SQL queries (non-parameterized queries), i.e., the queries that don't require the user input.
++ Program will call methods of this interface to execute 'static' SQL queries (non-parameterized queries), i.e., the queries that don't require the user input.
 
 + Few methods under 'statement interface' are:
   + public boolean execute(String query) **_(Call to execute SQL DDL query)_**
@@ -78,4 +78,21 @@
   STATEMENT INTERFACE SYNTAX:
   
     Statement st = cn.createStatement();
+```
+
+<br>
+
+### **PreparedStatement interface**
+
++ Program will call methods of this interface to execute 'dynamic' SQL queries (non-parameterized queries), i.e., the queries that don't require the user input.
+
++ Few methods under 'statement interface' are:
+  + public int executeUpdate() **_(Call to execute SQL DML parameterized query)_**
+  + public ResultSet executeQuery() **_(Call to execute SQL DQL parameterized query)_**
+  + etc...
+
+```
+  PREPARED-STATEMENT INTERFACE SYNTAX:
+  
+    PreparedStatement ps = cn.preparedStatement("Write SQL query here!");
 ```
