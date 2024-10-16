@@ -96,3 +96,27 @@
   
     PreparedStatement ps = cn.preparedStatement("Write SQL query here!");
 ```
+
+<br>
+
+### Executing SQL select query
+
++ If query is 'static', then following method of 'statement interface' is called to execute this query:
+
+```
+  public ResultSet executeQuery(String query)
+```
+
++ If query is 'dynamic', then following method of 'PreparedStatement interface' is called to execute this query:
+
+```
+  public ResultSet executeQuery();
+```
+
+<br>
+
+### ResultSet interface
+
++ An object of this interface is created and returned by executionQuery() method of 'Statement' and 'PreparedStatement' interfaces.
++ In this object, executeQuery() method keeps result-set data (i.e., records given by database server).
++ The program will fetch data from this object and show to the user.
