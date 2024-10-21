@@ -120,3 +120,7 @@
 + An object of this interface is created and returned by executionQuery() method of 'Statement' and 'PreparedStatement' interfaces.
 + In this object, executeQuery() method keeps result-set data (i.e., records given by database server).
 + The program will fetch data from this object and show to the user.
+
++ **ResultSet object**
+  + Object of this interface is called 'resultset object'.
+  + Every resultset object maintains a cursor which is initially positioned just before the first record.
