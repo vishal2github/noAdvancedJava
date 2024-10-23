@@ -99,7 +99,7 @@
 
 <br>
 
-### Executing SQL select query
+### **Executing SQL select query**
 
 + If query is 'static', then following method of 'statement interface' is called to execute this query:
 
@@ -115,7 +115,7 @@
 
 <br>
 
-### ResultSet interface
+### **ResultSet interface**
 
 + An object of this interface is created and returned by executionQuery() method of 'Statement' and 'PreparedStatement' interfaces.
 + In this object, executeQuery() method keeps result-set data (i.e., records given by database server).
@@ -123,4 +123,6 @@
 
 + **ResultSet object**
   + Object of this interface is called 'resultset object'.
-  + Every resultset object maintains a cursor which is initially positioned just before the first record.
+  + Every resultset object maintains a cursor which is initially positioned just before the first record (at index -1).
+  + The program can call next() method of ResultSet interface to move cursor one position forward. Return type of next() method is 'boolean'.
+  
