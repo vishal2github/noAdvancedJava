@@ -1,8 +1,12 @@
 # COLLECTION INTERFACE
 
+<br>
+
+### **Collection interface**
+
 + 'Collection framework' has name based on 'collection interface'.
 
-+ All collections including List, Set, and Queue collections have methods of this interface.
++ All collections including List, Set, and Queue collections have implemented methods of collection interface.
   + List collection
   + Set collection
   + Queue collection
@@ -17,7 +21,7 @@
   + public boolean addAll(Collection c)
   + public booean removeAll(Collection c)
   + public boolean retainAll(Collection c)
-  + public Iterator iterator()
+  + public Iterator<E> iterator()
 
 ```
   Note: 'E' is a class of generic/type-parameter of an element.
@@ -31,7 +35,7 @@
 
 <br>
 
-### Collection type
+### **Collection type**
 
 + Unlike an array which don't need the type to be declared while declaring an object, collection does.
 + Collection type is specified in 'angle brackets'.
@@ -54,15 +58,24 @@
 
 <br>
 
-### Interface vs class inheritance
+### **Interface vs class inheritance**
 
 + Java supports an interface inherite of multiple interfaces.
 + Java doesn't support the class inherite of multiple classes.
 
 <br>
 
-### Collection interface childs
+### **Collection interface childs**
 
 + List interface
 + Set interface
 + Queue interface
+
+<br>
+
+### **Datatype of reference variable**
+
++ Datatype of reference variable is the:
+  + Class from which object is created.
+  + Parent class of that class.
+  + Interface implemented by that class.

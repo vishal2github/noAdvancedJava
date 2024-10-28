@@ -1,6 +1,6 @@
 # COLLECTION FRAMEWORK
 
-### Collection in Java
+### **Collection in Java**
 
 + Individual items packed in single unit is collection in Java.
 + Collection is like container that merge multiple items in a single unit.
@@ -11,10 +11,12 @@
 
 <br>
 
-### Collection framework
+### **Collection framework**
 
-+ A collection framework in Java is unified architecture that represents a collection of interfaces and classes.
-+ It helps in managing (storing/processing) data efficiently.
++ Collection framework in Java is unified architecture that represents/provides a collection of interfaces and classes to manage objects.
++ It helps in managing (storing/processing) objects (data) efficiently.
++ Program keeps data into objects and objects will be managed by collection framework.
++ Program will call methods of these interfaces to manage obejcts.
 + If a program is creating the multiple objects from same class then array is better option.
 + If that object is storing data (and not part of UI) and object's total creation quantity is unknown, then collection framework is to be considered.
 + Collection framework's purpose is to store/manage the obejct's reference, in other words, to store/manage objects in memory.
@@ -43,7 +45,31 @@
 
 <br>
 
-### Advantages of Java Collection Framework
+### **Collection framework and interface**
+
++ Several interfaces includes:
+  + Collection interface
+  + List interface
+  + Set interface
+  + Queue interface
+  + De-queue interface
+  + Sorted-set interface
+  + etc...
+
++ Several classes includes:
+  + Array-list class
+  + Linked list class
+  + Vector class
+  + Hash-set class
+  + Linked-hash-set class
+  + List interface
+  + Tree-set class
+  + Priority-queue class
+  + etc...
+
+<br>
+
+### **Advantages of Java Collection Framework**
 
 + API consistency
 + Reduced programming exertion
