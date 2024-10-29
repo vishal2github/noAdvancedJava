@@ -14,6 +14,8 @@
   + Resource name
 
 + **Protocol:** It is the set of rules for communication. "http" stands for "Hyper-text Transfer Protocol".
-+ **IP address:** The computers are uniquely indetified by their IP address.
-+ **Local host:** Local host is used in place of an IP address when the client and server are on same system (computer).
-+ **Port number:** It is the identification of the servers.
+
++ **IP address:** The unique identity of system over network.
+  + **Local host:** Local host is used in place of an IP address when the client and server are on same system (computer).
+
++ **Port number:** An identification of the systems.
