@@ -21,7 +21,10 @@
   + public boolean addAll(Collection c)
   + public booean removeAll(Collection c)
   + public boolean retainAll(Collection c)
+
   + public Iterator<E> iterator()
+    + It is a method of iterable interface.
+    + Iterable interface is parent of collection interface.
 
 ```
   Note: 'E' is a class of generic/type-parameter of an element.
