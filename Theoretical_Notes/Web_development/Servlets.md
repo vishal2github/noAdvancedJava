@@ -72,3 +72,47 @@ ___________________________________________________________
 
     It is mandatory to provide servlet url-pattern also.
 ```
+
+<br>
+
+### **Servlets lifecycle**
+
++ Web server manages life cycyle of servlets.
+
++ It has following five phases:
+  + Loading servlet class *(Done only once)*
+  + Instantiating servlet class *(Done only once)*
+  + Initializing servlet *(Done only once. In this case, "init()" lifecycle method will be called and object of ServletConfig interface will be passes to this method by web server)*
+  + Processing HTTP request and generating HTTP response *(Done each time web services recieve request for this servlet. In this case, web server calls service life cycle method as passes obejct of ServletRequest and ServletResponse interface)*
+  + Destroying servlets *(Done one once. Web server destroys servlets when web server terminates/restarts. In this case, web server calls "destroy()" lifecycle method)*
+
++ **HTTP response status:** Indicate whether specific HTTP request has been successfully completed.
+
+  + Responses are grouped in five classes:
+    + 1 series (100 - 199) - Informational response
+    + 2 series (200 - 299) - Success response
+    + 3 series (300 - 399) - Redirectional response
+    + 4 series (400 - 499) - Client/browser error-response
+    + 5 series (500 - 599) - Server error-response
+
+<br>
+
+### **HttpServlet class**
+
++ It is child of GenericServlet class.
++ GenericServlet class is an implementation of Servlet interface.
++ HttpServlet class has implemented all methods of Servlet interface and has several own methods.
+
++ Few methods of HttpServlet class are as follows:
+  + public void service(HttpServletRequest request, HttpServletResponse response)
+  + public void doGet(HttpServletRequest request, HttpServletResponse response)
+  + public void doPost(HttpServletRequest request, HttpServletResponse response)
+  + public void doDelete(HttpServletRequest request, HttpServletResponse response)
+  + public void doPut(HttpServletRequest request, HttpServletResponse response)
+  + etc...
+
++ **Note**
+  + Instead of servlet interface, making a "servlet" by extending "HttpServlet" class is a better option.
+  + Because, in our servlet, there's need of only service() method, and if "Servlet" interface is used for this purpose then all methods body will needed to be defined.
+  + And in case of "HttpServlet" class extention, only required method's body will be defined.
+
