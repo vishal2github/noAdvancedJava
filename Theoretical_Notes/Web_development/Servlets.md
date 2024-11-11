@@ -80,11 +80,17 @@ ___________________________________________________________
 + Web server manages life cycyle of servlets.
 
 + It has following five phases:
-  + Loading servlet class *(Done only once)*
-  + Instantiating servlet class *(Done only once)*
-  + Initializing servlet *(Done only once. In this case, "init()" lifecycle method will be called and object of ServletConfig interface will be passes to this method by web server)*
-  + Processing HTTP request and generating HTTP response *(Done each time web services recieve request for this servlet. In this case, web server calls service life cycle method as passes obejct of ServletRequest and ServletResponse interface)*
-  + Destroying servlets *(Done one once. Web server destroys servlets when web server terminates/restarts. In this case, web server calls "destroy()" lifecycle method)*
+  + **Loading servlet class** _(Done only once)_
+  + **Instantiating servlet class** _(Done only once)_
+  + **Initializing servlet** _(Done only once. In this case, "init()" lifecycle method will be called and object of ServletConfig interface will be passes to this method by web server)_
+  + **Processing HTTP request and generating HTTP response** _(Done each time web services recieve request for this servlet. In this case, web server calls service life cycle method as passes obejct of ServletRequest and ServletResponse interface)_
+  + **Destroying servlets** _(Done one once. Web server destroys servlets when web server terminates/restarts. In this case, web server calls "destroy()" lifecycle method)_
+
++ Socket programming:
+  + It's a way of connecting two nodes on a network to communicate with each other.
+  + Once socket (node) listens on a particular port at an IP.
+  + While other socket reaches out to the other to form a connection.
+  + The server forms the listener socket while the client reaches out to the server.
 
 + **HTTP response status:** Indicate whether specific HTTP request has been successfully completed.
 
@@ -112,7 +118,6 @@ ___________________________________________________________
   + etc...
 
 + **Note**
-  + Instead of servlet interface, making a "servlet" by extending "HttpServlet" class is a better option.
+  + Instead of extending/inheriting servlet interface, making a "servlet" by extending/inheriting "HttpServlet" class is a better option.
   + Because, in our servlet, there's need of only service() method, and if "Servlet" interface is used for this purpose then all methods body will needed to be defined.
   + And in case of "HttpServlet" class extention, only required method's body will be defined.
-
