@@ -121,3 +121,28 @@ ___________________________________________________________
   + Instead of extending/inheriting servlet interface, making a "servlet" by extending/inheriting "HttpServlet" class is a better option.
   + Because, in our servlet, there's need of only service() method, and if "Servlet" interface is used for this purpose then all methods body will needed to be defined.
   + And in case of "HttpServlet" class extention, only required method's body will be defined.
+
+<br>
+
+### **Service method calling**
+
++ _Servlet interface service method (orignal service method)._
++ _HttpServlet class service method (duplicate service method)._
+
+<br>
+
++ Web server will call original service method.
++ Original service method is overridden by "HttpServlet" class.
++ Original service method will call duplicate service method.
++ Remember, duplicate service method is overridden by your/our servlet.
++ If both service methods are overridden in your/our servlet class, then original service method will run.
+
+<br>
+
+### **Request object**
+
++ It is an object of "ServletRequest" interface.
++ Web server creates this object and passes reference of this object to service method.
++ In this object, web server keeps serveral information (The information that web server is recieving from browser).
++ In this object data is kept into key-value pair.
++ Service method can call "getter" method to get data from this object.
