@@ -4,7 +4,7 @@
 
 ### **List interface/collection**
 
-+ "List interface' is a child of 'collection interface'.
++ "List interface" is a child of "Collection interface".
 + Implementation classes of list interface are known as list collection.
 
 + Features of list interface includes:
@@ -38,7 +38,7 @@
 ### **ArrayList class**
 
 + Written as 'arrayList'.
-+ It is an implementaion of 'List interface'.
++ It is an implementaion of "List interface".
 + It creates and uses resizable array of type E and size 10 to keep elements.
 
 ```
@@ -76,3 +76,22 @@ ________________________________________________________________________________
       > list2 will be 'Homogeneous' and 'Employee type array' and can hold only 'Employee-type' elements.
       > list3 will be 'Heterogeneous' and 'Object type array' and can hold any type of elements.
 ```
+
+<br>
+
+### **LinkedList class**
+
++ Written as "linkedList".
++ It is an implementaion of 'List interface'.
+
++ Linked list is categorized in three forms:
+  + Single linked list
+  + Double linked list
+  + Circular linked list
+
+<br>
+
+### **Vector class**
+
++ Written as "Vector".
++ It is an implementaion of "List interface".
