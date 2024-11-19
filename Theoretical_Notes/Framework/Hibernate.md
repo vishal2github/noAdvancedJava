@@ -1,4 +1,4 @@
-# JAVA FRAMEWORK
+# JAVA FRAMEWORK: HIBERNATE, JPA, AND ORM
 
 <br>
 
@@ -21,8 +21,9 @@
 <br>
 
 ### **Persisting object**
-  + Saving states of the object permanently is called "persisting object".
-  + As known, states of the object is kept temporarily into memory by program.
+
++ Saving states of the object permanently is called "persisting object".
++ As known, states of the object is kept temporarily into memory by program.
 
 <br>
 
@@ -52,6 +53,23 @@
   + Creating partial unit testing code
   + Creating deployable file
   + Deploying project
+  + etc...
+
+<br>
+
+### **Hibernate**
+
++ Hibernate is a widely used ORM tool.
+
++ Hibernate performs/handles several JDBC responsibilities:
+  + Loaing driver class
+  + Creating connection
+  + Creating statement object
+  + Writing SQL queries
+  + Executing SQL queries
+  + Creating ResultSet object
+  + Storing records in result set
+  + To put/retrieve the recoreds in the class object
   + etc...
 
 <br>
@@ -143,12 +161,89 @@
   
   + This file is to be created inside "src" folder, which "xml" as an extension name.
 
+  + Values for "hbm2ddl.auto" properties:
+    + **update** _(If table doesn't exist, then SessionFactory will create table according to the mapping information)_
+    
+    + **create** _(If table doesn't exist, then SessionFactory will create table according to the mapping information. If table exists, then SessionFactory will drop that table and create table again)_
+    
+    + **create-drop** _(If table doesn't exist, then SessionFactory will create table according to the mapping information. If table exists, then SessionFactory will drop that table and create table again. When SessionFactory will be closed by program then that table will be dropped by SessionFactory)_
+    
+    + **validate** _(In this case, SessionFactory will check existence of table in database. If not found, then throw and exception)_
+
   <br>
 
   #### **5. Creating CFG file**
+
+  + It stands for configuration.
+  + It should be an "xml" file.
+  + This file keeps database connection information and many more.
 
   <br>
 
   #### **6. Creating repository class**
 
+<br>
+
+### **Interfaces of Hibernate**
+
++ There are several interfaces provided by hibernate like:
+  + SessionFactory interface
+  + Session interface
+  + Transaction interface
+  + Query interface
+  + etc...
+
++ Our program (respository class) will call methods of above interfaces to communicate with hibernate.
+
+<br>
+
+  #### **SessionFactory interface**
+
+  + Our repository class (program) will create an object of this interface.
+  + DDL operation will be performed as soon as object of this interface will be created.
+  + Repository class can call buildSessionFactory() method of Configuation class to create this object.
+  + Before calling buildSessionFactory() method call configure() method of Configuration class to load cfg file in memory.
+
+  <br>
+
+  ```
+    USAGE
+
+      Configuration c = new Configuration();
+      c.configure("hibernate.cfg.xml");
+      SessionFactory factory = c.buildSessionFactory();
+
+    OR VIA METHOD CHAINING
+
+      SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
+  ```
+
+  #### **Session interface**
+
+  + Our repository class will call methods of this interface to perform DML (Persisting object, deleting object, updating object), and DQL (Select object) operation.
+  + Call openSession() method of SessionFactory interface to create object of Session interface.
+  
+  <br>
+
+  ```
+    USAGE
+
+      Session session = factory.openSession();
+  ```
+
+  <br>
+
+  #### **Transaction interface**
+
+  + Our repository class will call methods of this interface to begin and commit transaction.
+  + Our repository class will call begin() and commit() methods of this interface.
+  + Every DML operation must be inside begin and commit transactions.
+
+  <br>
+
+  ```
+    USAGE
+
+      
+  ```
 <br>
