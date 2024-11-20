@@ -177,6 +177,7 @@
   + It stands for configuration.
   + It should be an "xml" file.
   + This file keeps database connection information and many more.
+  + **Note:** If file name is "hibernate.cgf.xml", then it isn't necessary to pass this file name inside "configure()" method. It is only passed if the file name is different.
 
   <br>
 
@@ -204,10 +205,12 @@
   + Repository class can call buildSessionFactory() method of Configuation class to create this object.
   + Before calling buildSessionFactory() method call configure() method of Configuration class to load cfg file in memory.
 
+    + **Note:** If cfg file name is "hibernate.cgf.xml", then it isn't necessary to pass this file name inside "configure()" method. It is only passed if the file name is different.
+
   <br>
 
   ```
-    USAGE
+    SYNTAX
 
       Configuration c = new Configuration();
       c.configure("hibernate.cfg.xml");
@@ -226,7 +229,7 @@
   <br>
 
   ```
-    USAGE
+    SYNTAX
 
       Session session = factory.openSession();
   ```
@@ -242,8 +245,31 @@
   <br>
 
   ```
-    USAGE
+    SYNTAX
 
-      
+      Transaction tr = session.getTransaction();
+      tr.begin();
+      session.persist();
+      session.save();
+      tr.commit();
   ```
 <br>
+
+### **HQL**
+
++ "HQL" stands for "Hibernate Query Language".
++ As for hibernate, it hasn't methods for every query possible, hence, one needs to write custom query and give that query to the hibernate. This query is called HQL.
++ One can write and use this query for select, delete, and update tasks.
++ In this query, one has to write "Persistent" class name in place of table name.
++ One has to write instance variable name in place of column name.
++ One has to pass this query to the createQuery() method of Session interface.
++ The createQurery() method will create an object of "org.hinbernate.query.Query" interface and store the passed query into this object and return reference of this object.
+
+<br>
+
+```
+  SYNTAX
+
+    Query<Employee> query = session.createQuery("from Employee", Employee.class);
+    List<Employee> employeeList = query.list();
+```
