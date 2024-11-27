@@ -273,3 +273,74 @@
     Query<Employee> query = session.createQuery("from Employee", Employee.class);
     List<Employee> employeeList = query.list();
 ```
+
+<br>
+
+### **Class-relations in hibernate**
+
++ In hibernate, one need to map the relationships of "Inheritance" and/or "Association".
+
++ One has following two types of mapping between entities (persistent classes) here:
+  + Inheritance
+  + Association
+
+```
+  INHERITANCE (EXTENDS)
+
+    public class AA
+    {
+      // properties
+    }
+
+    public class BB extends AA
+    {
+      // code
+    }
+
+  Note: Here, class "BB" is a sub-class of class "AA".
+        (IS A RELATIONSHIP FACTOR).
+```
+
+<br>
+
+```
+  ASSOCIATION
+
+    public class BB
+    {
+      private AA obj;
+      
+      public BB(AA obj)
+      {
+        this.obj = obj;
+      }
+    }
+  
+  Note: Here, object of class "BB" has an object of class "AA".
+        (HAS A RELATIONSHIP FACTOR)
+```
+
+<br>
+
+### **Association**
+
++ This mapping is required when object of one entity class will be used by other entity classes.
+
++ There are four types of association between objects/instances:
+  + One-to-one
+  + One-to-many
+  + Many-to-one
+  + Many-to-many
+
+<br>
+
+### **States of object in hibernate**
+
++ Transient state
++ Persistent state
++ Detatched state
++ Removed state
+
+<br>
+
++ **Transient state:** ?
