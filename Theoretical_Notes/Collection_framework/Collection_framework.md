@@ -1,13 +1,16 @@
 # COLLECTION FRAMEWORK
 
+<br>
+
 ### **Collection in Java**
 
 + Individual items packed in single unit is collection in Java.
 + Collection is like container that merge multiple items in a single unit.
-+ Example: In layman's term, a bundle of stick. In technical term, a list of employee names (list is java collection).
++ **Example:** In layman's term, a bundle of sticks. In technical term, a list of employee names (list is java collection).
+
 + Two principal root interfaces of Java collection classes:
-  + Collection interface (Under 'java.util.Collection')
-  + Map interface (Under 'java.util.Map')
+  + **Collection interface** (Under "java.util.Collection")
+  + **Map interface** (Under "java.util.Map")
 
 <br>
 
@@ -24,22 +27,27 @@
 + Array-objects are also created during runtime, but these are already created in starting of a loop.
 
 + Object's management by collection framework includes:
-  + Keeping objects (Object's reference)
-  + Removing objects (Object's reference)
-  + Iterating objects (Object's reference)
-  + Sorting objects (Object's reference)
-  + Searching objects (Object's reference)
+  + **Keeping objects** (Object's reference)
+  + **Removing objects** (Object's reference)
+  + **Iterating objects** (Object's reference)
+  + **Sorting objects** (Object's reference)
+  + **Searching objects** (Object's reference)
 
-+ 'java.util' package contains interfaces and classes of collection framework.
++ "java.util" package contains interfaces and classes of collection framework.
 + Collection framework was introduced in JDK 1.2.
 + Collection framework was made generic in JDK 1.5.
 + The abstract method is defined inside abstract class when the method is to be inherited in child class.
 + If classes want to implement methods, then those methods should be defined under an interface.
-+ 'Method's body' is allowed in an interface from Java 8 onwards, but method must be 'static' or 'default' type.
-+ 'Static method' isn't visible, and 'default method' is visible, inside 'implementation class', so 'implementation class' can't overwrite 'static method' but can overwrite 'default method'.
++ Method's body is allowed in an interface from Java 8 onwards, but method must be "static" or "default" type.
+
++ **Difference between static and default methods of an interface**
+  + Static method isn't visible, and default method is visible, inside implementation class.
+  + So implementation class can't overwrite static method but can overwrite default method.
+
+<br>
 
 ```
-  From Java 8 and onwards, allowance of 'method body' in an interface ? Why?
+  From Java 8 and onwards, allowance of method's body in an interface? Why?
     Because...
 ```
 
