@@ -327,10 +327,10 @@
 + This mapping is required when object of one entity class will be used by other entity classes.
 
 + There are four types of association between objects/instances:
-  + One-to-one
-  + One-to-many
-  + Many-to-one
-  + Many-to-many
+  + One-to-one (Identity-Person)
+  + One-to-many (User-SIMS)
+  + Many-to-one (SIMS-User)
+  + Many-to-many (Teachers-Students, Students-Courses)
 
 <br>
 
@@ -340,7 +340,3 @@
 + Persistent state
 + Detatched state
 + Removed state
-
-<br>
-
-+ **Transient state:** ?
