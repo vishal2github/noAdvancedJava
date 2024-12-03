@@ -5,6 +5,7 @@
 ### **ORM**
 
 + "ORM" is a framework tool.
+
 + It stands for "Object Relational Mapping".
 
 + ORM tool will perform followig tasks:
@@ -23,6 +24,7 @@
 ### **Persisting object**
 
 + Saving states of the object permanently is called "persisting object".
+
 + As known, states of the object is kept temporarily into memory by program.
 
 <br>
@@ -30,8 +32,11 @@
 ### **Build tool**
 
 + It's a software that automates the process of turning the code into a working program or application.
+
 + It helps prepare, compile, and package the code so that it can run on a computer or server.
+
 + Build tools save time and make sure the process is consistent every time there's need to build a project.
+
 + It also helps in unit testing code.
 
 + Examples of build tool:
@@ -89,12 +94,14 @@
   #### **1. Creating Maven project**
 
   + File → New → Maven project option
+
   + New Maven project window → Click next
+
   + Select an Archetype → Catalog → Internal
 
   + Archetype list log → Select archetype (either "maven-archetype-quickstart" or "maven-archetype-webapp")
     + **Note:** Can select "maven-archetype-quickstart for standalone.
-  + After archetype selection → Click next
+    + After archetype selection → Click next
 
   + Enter group id (Org name), artifact id (project name), and package name
     + Group Id: com.cetpa
@@ -110,8 +117,11 @@
   #### **2. Configuring project dependencies into pom.xml file**
 
   + All external jar files (that project need in order to perform jar file) are known as dependencies.
+
   + Can add these jar files manually in the project.
+
   + Or we can configure these dependencies for Maven, in case, Maven will download and add these jar files into project.
+
   + Maven will download all jar files from central repository and copies all jar files into local repository (Local repository is created into computer in which project is built).
 
   + How to configure project dependencies?
@@ -124,8 +134,11 @@
   #### **3. Creating persistent class**
 
   + Instances of this class will be saved/persisted by ORM tool (i.e., Hibernate) into database.
+
   + This class is also known as entity class.
+
   + This class should be java "POJO" class.
+
   + "POJO" stands for "Plain Old Java Object".
 
   + A POJO class must have:
@@ -148,8 +161,11 @@
   #### **4. Creating hbm file**
 
   + "HBM" stands for "Hibernate Mapping".
+
   + It's an XML file.
+
   + In this file, we'll have to write mapping of persistent class with table.
+
   + So that hibernate can perform SQL operations (such as, creating table, inserting records, deleting records, etc).
   
   + We will use following tags provided by hibernate framework:
@@ -175,8 +191,11 @@
   #### **5. Creating CFG file**
 
   + It stands for configuration.
+
   + It should be an "xml" file.
+
   + This file keeps database connection information and many more.
+
   + **Note:** If file name is "hibernate.cgf.xml", then it isn't necessary to pass this file name inside "configure()" method. It is only passed if the file name is different.
 
   <br>
@@ -201,11 +220,14 @@
   #### **SessionFactory interface**
 
   + Our repository class (program) will create an object of this interface.
+
   + DDL operation will be performed as soon as object of this interface will be created.
+
   + Repository class can call buildSessionFactory() method of Configuation class to create this object.
+
   + Before calling buildSessionFactory() method call configure() method of Configuration class to load cfg file in memory.
 
-    + **Note:** If cfg file name is "hibernate.cgf.xml", then it isn't necessary to pass this file name inside "configure()" method. It is only passed if the file name is different.
+  + **Note:** If cfg file name is "hibernate.cgf.xml", then it isn't necessary to pass this file name inside "configure()" method. It is only passed if the file name is different.
 
   <br>
 
@@ -224,6 +246,7 @@
   #### **Session interface**
 
   + Our repository class will call methods of this interface to perform DML (Persisting object, deleting object, updating object), and DQL (Select object) operation.
+
   + Call openSession() method of SessionFactory interface to create object of Session interface.
   
   <br>
@@ -239,7 +262,9 @@
   #### **Transaction interface**
 
   + Our repository class will call methods of this interface to begin and commit transaction.
+
   + Our repository class will call begin() and commit() methods of this interface.
+
   + Every DML operation must be inside begin and commit transactions.
 
   <br>
@@ -258,11 +283,17 @@
 ### **HQL**
 
 + "HQL" stands for "Hibernate Query Language".
+
 + As for hibernate, it hasn't methods for every query possible, hence, one needs to write custom query and give that query to the hibernate. This query is called HQL.
+
 + One can write and use this query for select, delete, and update tasks.
+
 + In this query, one has to write "Persistent" class name in place of table name.
+
 + One has to write instance variable name in place of column name.
+
 + One has to pass this query to the createQuery() method of Session interface.
+
 + The createQurery() method will create an object of "org.hinbernate.query.Query" interface and store the passed query into this object and return reference of this object.
 
 <br>
