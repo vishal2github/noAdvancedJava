@@ -219,3 +219,81 @@
       <constructor-arg name='aa' ref='b1' />
     </bean>
 ```
+
+<br>
+
+### **Scopes of bean**
+
++ Scopes of the bean can be as follow:
+  + Singleton scope
+  + Prototype scope
+  + Request scope
+  + Session scope
+  + Global-session scope
+
+  <br>
+
+  #### **Singleton scope**
+  + It is default scope of every bean.
+
+  + In this case the class of the beans will be instantiated only once during the project's lifecycle.
+
+  + Singleton is also a design pattern.
+
+  + This design pattern helps to create a singleton class.
+
+  <br>
+
+  #### **Prototype scope**
+
+  + In this case, beans will be created each time program will call getBean() method or program will demand bean.
+
+<br>
+
+### **Configuration types**
+
++ Spring framework allows following three configuration types:
+  + XML-based configuration
+  + Annotation-based configuration
+  + Java code based configuration
+
++ Four stereotype annotations:
+  + Service annotation
+  + Component annotation
+  + Repository annotation
+  + Controller annotation
+
+<br>
+
+### **Spring autowiring**
+
++ Injecting dependency automatically is called autowiring.
+
++ One need to set one of the following autowiring mode:
+  + byName mode
+  + byType mode
+  + constructor mode
+
+<br>
+
+  #### **byName mode**
+
+  + In this mode, name of dependency will be matched with name of configured beans.
+
+  + Matching bean will be injected by setter injection.
+
+  + This should be set when multiple implementations of dependency are configured.
+
+  <br>
+
+  #### **byType mode**
+
+  + In this mode, type of dependency will be matched with type of configured beans.
+
+  + Matching bean will be injected by setter injection.
+
+  + This should be set when single implementation of dependency is configured.
+
+  + If multiple matching beans will be available then exception will be created and thrown.
+ 
+<br>
