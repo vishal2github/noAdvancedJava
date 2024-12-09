@@ -192,10 +192,14 @@
 
 + IOC container will call setter method of dependent class to inject dependency.
 
++ Setter injection will work repeatedly as it can be called/invoked as many times as demanded.
+
++ In setter injection, the dependency will be injected after creation of object of dependent class.
+
 <br>
 
 ```
-  CONFIGURATION
+  SETTER INJECTION CONFIGURATION
 
     <bean name='b1' class='com.cetpa.AA' />
     <bean name='b2' class='com.cetpa.BB' />
@@ -205,14 +209,18 @@
 
 <br>
 
-### **Configuration injection**
+### **Constructor injection**
 
 + IOC container will call parameterized constructor of dependent class to inject dependency.
+
++ Constructor injection will work only once upon an object's creation.
+
++ In constructor injection, the dependency will be injected along with the creation of object of dependent class.
 
 <br>
 
 ```
-  CONFIGURATION
+  CONSTRUCTOR INJECTION CONFIGURATION
 
     <bean name='b1' class='com.cetpa.AA' />
     <bean name='b2' class='com.cetpa.BB' />
@@ -234,19 +242,27 @@
   <br>
 
   #### **Singleton scope**
+
   + It is default scope of every bean.
 
   + In this case the class of the beans will be instantiated only once during the project's lifecycle.
 
   + Singleton is also a design pattern.
 
+  + Singleton scope's instantiation is eager.
+
   + This design pattern helps to create a singleton class.
+    + Singleton class has "private static instance/field", ensures that only one instace is maintained throughout the application.
+    + Singleton class has "private constructor", prevents external code from creating multiple instances.
+    + Singleton class has "public static method", ensures controlled access to the single instance.
 
   <br>
 
   #### **Prototype scope**
 
   + In this case, beans will be created each time program will call getBean() method or program will demand bean.
+
+  + Singleton scope's instantiation is lazy.
 
 <br>
 
