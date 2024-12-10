@@ -262,22 +262,35 @@
 
   + In this case, beans will be created each time program will call getBean() method or program will demand bean.
 
-  + Singleton scope's instantiation is lazy.
+  + Prototype scope's instantiation is lazy.
 
 <br>
 
 ### **Configuration types**
 
 + Spring framework allows following three configuration types:
-  + XML-based configuration
-  + Annotation-based configuration
-  + Java code based configuration
+  + XML based configuration
+  + Annotation based configuration
+  + Java-code based configuration
 
 + Four stereotype annotations:
   + Service annotation
   + Component annotation
   + Repository annotation
   + Controller annotation
+
+<br>
+
+### **Annotation**
+
++ Purpose of annotation is to provide information to the framework, upon which they're applied.
+
++ Annotation can be applied on:
+  + Class level (The information about class)
+  + Method level (The information about method)
+  + Argument level (The information about argument)
+  + Constructor level (The information about constructor)
+  + Instance-variable level (The information about instance-variable)
 
 <br>
 
