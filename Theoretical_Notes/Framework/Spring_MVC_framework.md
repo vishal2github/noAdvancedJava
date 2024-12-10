@@ -147,3 +147,30 @@
     + viewresolver
     + beans
     + etc...
+
+<br>
+
+### **Front controller**
+
++ Every Spring-MVC project has a "front controller".
+
++ Front controller is responsible to perform following tasks:
+  + Creating model object
+  + Calling methods of controller
+  + Accepting return value from methods of controller
+  + Resolving views
+  + Executing views
+  + etc...
+
++ Front controller will be called by web-server.
+
++ In Spring-MVC project, front controller is a servlet with class name "DispatcherServlet".
+
++ Every request and response goes through front controller.
+
++ Front controller must be configured in "web.xml" file.
+
++ Web-server calls it and passes request and data to the front controller.
+
+<br>
+
