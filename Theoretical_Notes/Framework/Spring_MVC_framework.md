@@ -174,3 +174,21 @@
 
 <br>
 
+### **Performing CRUD operation in Spring-MVC framework**
+
++ One can use hibernate in project to perform CRUD operation.
+
++ Following dependencies must be configured in "pom.xml" file:
+  + Spring-jdbc
+  + Spring-orm
+  + Hibernate-core
+  + Hibernate-c3p0
+  + Mysql-connector
+
++ Create following packages in project's base package:
+  + Controller
+  + Service
+  + Repository
+  + Entity
+
+<br>
