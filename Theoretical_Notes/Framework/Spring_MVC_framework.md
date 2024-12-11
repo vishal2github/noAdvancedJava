@@ -122,8 +122,8 @@
     CONFIGURATION CODE
 
       <servlet>
-        <servlet-class> org.springframework.web.servlet.
-        DispatcherServlet
+        <servlet-class>
+          org.springframework.web.servlet.DispatcherServlet
         </servlet-class>
       </servlet>
 
