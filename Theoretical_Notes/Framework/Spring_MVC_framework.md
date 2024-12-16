@@ -192,3 +192,89 @@
   + Entity
 
 <br>
+
+### **ViewResolver interface**
+
++ ViewResolver is an interface.
+
++ Object of ViewResolver interface holds two values:
+  + Location of the view as prefix property
+  + Extention of the view as suffix property
+
++ Implementation of this interface must be configured manually either using xml or using java-code.
+
+<br>
+
+```
+  NOTE
+
+    • If view template engine is JSP, then configure
+    "InternalResourceViewResolver" class as bean.
+  
+
+  SYNTAX
+
+    <bean id='resolver' class='packagename.InternalResourceViewResolver'>
+      <property name='prefix' value='/templates/' />
+      <property name='suffix' value='.jsp' />
+    </bean>
+```
+
+<br>
+
++ IOC container will create object of "InternalResourceViewResolver" class and give reference of object of this class to the front controller.
+
++ Front controller will get prefix value from this object and concatenate prefix value before the name of view.
+
++ Front controller will get suffix value from this object and concatenate suffix value after the name of view.
+
+<br>
+
+### **JSTL**
+
++ It stands for "JSP Standard Tag Library".
+
++ By using tags of this library, one can write presentation logic code inside JSP page without writing single line of java-code.
+
++ Following commands can be written using these tags:
+  + Command to create variable
+  + Command to apply condition
+  + Command to execute loop
+  + Command to perform string functions
+  + Command to call JDBC-API
+  + etc...
+
++ Following five liraries are provided in JSTL:
+  + JSP core library (http://java.sun.com/jsp/jstl/core)
+  + JSP formatting library (http://java.sun.com/jsp/jstl/fmt)
+  + JSP functions library (http://java.sun.com/jsp/jstl/functions)
+  + JSP xml library  (http://java.sun.com/jsp/jstl/xml)
+  + JSP sql library (http://java.sun.com/jsp/jstl/sql)
+
++ Along with JSTL, the EL (Expression Language) in JSP pages will also be used.
+
+<br>
+
+### **Deployment descriptor file**
+
++ Name of this file must be "web.xml".
+
++ It specifies how the web server uses the application's classes, resources, and configuration to serve web/http requests.
+
++ This configuration will be used by web server during deployment of project on web server and during each http request.
+
++ In case of Spring-MVC project, the front controller will be configured (DispatcherServlet) inside this file and with many more configurations.
+
++ This file 
+
+<br>
+
+  #### **Second configuration file**
+
+  + Name of second configuration file should be name of servlet (in web.xml file) -serblet.xml.
+
+  + If name of servlet is "abc", then this file name should be abc-servlet.xml.
+
+  + *If name of servlet is "abc", then this file name should be abc-servlet.xml.*
+
+<br>
