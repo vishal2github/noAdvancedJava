@@ -265,7 +265,7 @@
 
 + In case of Spring-MVC project, the front controller will be configured (DispatcherServlet) inside this file and with many more configurations.
 
-+ This file 
++ This file must be kept inside "WEB-INF" folder.
 
 <br>
 
@@ -275,6 +275,6 @@
 
   + If name of servlet is "abc", then this file name should be abc-servlet.xml.
 
-  + *If name of servlet is "abc", then this file name should be abc-servlet.xml.*
+  + If name of servlet is "spring", then this file name should be spring-servlet.xml.
 
 <br>
