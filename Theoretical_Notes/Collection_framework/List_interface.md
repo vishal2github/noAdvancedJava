@@ -4,7 +4,7 @@
 
 ### **List interface/collection**
 
-+ "List interface" is a child of "Collection interface".
++ "List interface" is a sub-interface (child) of "Collection interface".
 + Implementation classes of list interface are known as list collection.
 
 + Features of list interface includes:

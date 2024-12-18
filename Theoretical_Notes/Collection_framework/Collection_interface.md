@@ -68,7 +68,7 @@
 
 <br>
 
-### **Collection interface childs**
+### **Collection interface childs (Sub-interfaces)**
 
 + List interface
 + Set interface
