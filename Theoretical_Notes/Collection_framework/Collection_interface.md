@@ -1,4 +1,4 @@
-# COLLECTION INTERFACE
+# **COLLECTION INTERFACE**
 
 <br>
 
@@ -19,7 +19,7 @@
   + public int size()
   + public void clear()
   + public boolean addAll(Collection c)
-  + public booean removeAll(Collection c)
+  + public boolean removeAll(Collection c)
   + public boolean retainAll(Collection c)
 
   + public Iterator<E> iterator()
@@ -31,9 +31,13 @@
 ```
 
 + An interface implements class, hence implementation-class is created using an interface implementation.
+
 + If an argument or variable is of interface type, then in that argument or variable one can put the implementation class's obeject's reference.
+
 + If method's return type is class, then object's reference of that class will be returned.
+
 + If method's return type is interface, then object's reference of implemented class of that interface will be returned.
+
 + If method's return type is iterator, then it will return an object's reference of an iterator-interface implementing class.
 
 <br>
@@ -41,6 +45,7 @@
 ### **Collection type**
 
 + Unlike an array which don't need the type to be declared while declaring an object, collection does.
+
 + Collection type is specified in 'angle brackets'.
 
 ```
@@ -64,6 +69,7 @@
 ### **Interface vs class inheritance**
 
 + Java supports an interface inherite of multiple interfaces.
+
 + Java doesn't support the class inherite of multiple classes.
 
 <br>
