@@ -1,10 +1,11 @@
-# LIST INTERFACE/COLLECTION
+# **LIST INTERFACE/COLLECTION**
 
 <br>
 
 ### **List interface/collection**
 
 + "List interface" is a sub-interface (child) of "Collection interface".
+
 + Implementation classes of list interface are known as list collection.
 
 + Features of list interface includes:
@@ -38,8 +39,12 @@
 ### **ArrayList class**
 
 + Written as 'arrayList'.
+
 + It is an implementaion of "List interface".
+
 + It creates and uses resizable array of type E and size 10 to keep elements.
+
+<br>
 
 ```
   HOMOGENEOUS LIST-COLLECTION EXAMPLE (can take only String type of arguments):
@@ -82,6 +87,7 @@ ________________________________________________________________________________
 ### **LinkedList class**
 
 + Written as "linkedList".
+
 + It is an implementaion of 'List interface'.
 
 + Linked list is categorized in three forms:
@@ -94,4 +100,5 @@ ________________________________________________________________________________
 ### **Vector class**
 
 + Written as "Vector".
+
 + It is an implementaion of "List interface".

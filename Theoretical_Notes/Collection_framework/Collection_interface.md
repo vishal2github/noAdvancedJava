@@ -49,19 +49,30 @@
 + Collection type is specified in 'angle brackets'.
 
 ```
-    Collection example 1:
-    ArrayList <String> list1 = new ArrayList <String>();
-    list1.add("Hello");
-    list1.add(10); // Error: Only string accepted as collection type is 'String'
+    COLLECTION EXAMPLE 1
 
-    Collection example 2:
-    ArrayList <Product> list1 = new ArrayList <Product>();
-    list1.add(new Product());
-    list1.add("Hello"); // Error: Only Product object's reference accepted as collection type is 'Product'
-    list1.add(10); // Error: Only Product object's reference accepted as collection type is 'Product'
+      ArrayList <String> list1 = new ArrayList <String>();
+      list1.add("Hello");
+      list1.add(10); // Error: Only string accepted as collection type is 'String'
 
-    Array example:
-    ArrayList list1 = new ArrayList();  // No type mentioned in array while successfully declaring an object
+
+    COLLECTION EXAMPLE 2
+      ArrayList <Product> list1 = new ArrayList <Product>();
+      list1.add(new Product());
+      list1.add("Hello"); // Error: Only Product object's reference accepted as collection type is 'Product'
+      list1.add(10); // Error: Only Product object's reference accepted as collection type is 'Product'
+
+
+    COLLECTION EXAMPLE 3
+
+      ArrayList list1 = new ArrayList();  // No type mentioned in array while successfully declaring an object
+
+
+      String str;
+      str = new Product(); // Error: As variable datatype and object's datatype are different
+    
+      Object str;
+      str = newProduct(); // Accepted here, variable and object's datatype matches
   ```
 
 <br>
