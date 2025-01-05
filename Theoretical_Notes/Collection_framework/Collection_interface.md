@@ -26,9 +26,13 @@
     + It is a method of iterable interface.
     + Iterable interface is parent of collection interface.
 
+<br>
+
 ```
   Note: 'E' is a class of generic/type-parameter of an element.
 ```
+
+<br>
 
 + An interface implements class, hence implementation-class is created using an interface implementation.
 
@@ -47,6 +51,8 @@
 + Unlike an array which don't need the type to be declared while declaring an object, collection does.
 
 + Collection type is specified in 'angle brackets'.
+
+<br>
 
 ```
     COLLECTION EXAMPLE 1
@@ -74,6 +80,24 @@
       Object str;
       str = newProduct(); // Accepted here, variable and object's datatype matches
   ```
+
+<br>
+
++ In array, to specify the 'type' of an array isn't needed to declare an object.
+
++ In collection, the 'type (collection type)' is mandatory to declare an object.
+
+<br>
+
+```
+  OBJECT DELARATION VIA ARRAY:
+    ArrayList obj1 = new ArrayList();  // No array type is needed to be specified
+
+  OBJECT DELARATION VIA COLLECTION:
+    ArrayList <String> obj1 = ArrayList <String> ();  Collection type is 'String'
+    or
+    ArrayList <Product> obj1 = ArrayList <Product> ();  // Collection type is 'Product (supposed class)'
+```
 
 <br>
 
