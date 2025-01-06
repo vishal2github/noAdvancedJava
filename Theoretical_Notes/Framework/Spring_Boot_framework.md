@@ -24,3 +24,35 @@
 + In every application there will be a main class by default, which is annotated with "@SpringBootApplication" annotation.
 
 + This class will be responsible to start/launch/boot the application.
+
+<br>
+
+### **Spring data-JPA**
+
++ It is a spring library.
+
++ It adds an extra layer of abstraction on JPA provider such as:
+  + Hibernate
+  + EclipseLink
+  + IBatis
+  + etc...
+
++ It provides several interfaces, one of them is "JpaRepository".
+
++ A child interface of "JpaRepository" interface is needed to be created.
+
+<br>
+
+```
+  CHILD INTERFACE
+
+    public interface MyRepository extends JpaRepository<EntityClass, WrapperClassOfPrimaryKey>
+    {
+    }
+```
+
+<br>
+
++ Implementation of this child interface will be provided by spring framework.
+
++ It doesn't have the "cache feature".
