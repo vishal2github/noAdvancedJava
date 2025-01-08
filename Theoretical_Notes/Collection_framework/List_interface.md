@@ -31,15 +31,15 @@
 ### **List interface/collection implementation classes**
 
 + List interface/collection has following three implementation classes:
-  + ArrayList class
-  + LinkedList class
+  + Array-list class
+  + Linked-list class
   + Vector class
 
 <br>
 
-### **ArrayList class**
+### **Array-list class**
 
-+ Written as 'arrayList'.
++ Written as **"arrayList".**
 
 + It is an implementaion of "List interface".
 
@@ -85,21 +85,56 @@ ________________________________________________________________________________
 
 <br>
 
-### **LinkedList class**
+### **Linked-list class**
 
-+ Written as "linkedList".
++ Written as **"linkedList".**
 
-+ It is an implementaion of 'List interface'.
++ It is an implementaion of "list" and "deque" interfaces.
+
++ Means, it has properties of both list and deque interfaces.
+
++ Few methods of deque interface implemented in this class are:
+  + public void addFirst(E element)
+  + public void addLast(E element)
+  + public E removeFirst()
+  + public E removeLast()
+  + public E getFirst()
+  + public E getLast()
+  + etc...
 
 + Linked list is categorized in three forms:
-  + Single linked list
-  + Double linked list
-  + Circular linked list
+  + Single linked-list
+  + Doubly linked-list
+  + Circular linked-list
+
++ Linked-list class creates and uses doubly linked list to keep elements.
+
+<br>
+
+```
+  NOTE
+
+    • "Linked-list class" and "linked-list data-structure" are two different concepts.
+```
+
+<br>
+
+### **Array-list vs DSA-linked-list**
+
++ Array has a fixed size, while the size of linked-list isn't fixed.
+
++ Array can neither grow nor shrink, while linked-list can grow and shrink.
+
++ Memory allocation is static in an array, while it is dynamic for linked-list.
+
++ Memory allocation is in contiguous in an array, while it is in scattered way for linked-list.
+
++ Array works on concept of indexing, and linked-list works on concept of noding.
 
 <br>
 
 ### **Vector class**
 
-+ Written as "Vector".
++ Written as **"Vector".**
 
 + It is an implementaion of "List interface".
