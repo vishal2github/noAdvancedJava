@@ -6,7 +6,7 @@
 
 + "List interface" is a sub-interface (child) of "Collection interface".
 
-+ Implementation classes of list interface are known as list collection.
++ Implementation classes of List interface are known as list collection.
 
 + It has several methods of its own as well like:
   + public void add(int index, E element)
@@ -15,7 +15,7 @@
   + public E set(int index, E element)
   + etc...
 
-+ Features of list interface includes:
++ Features of List interface includes:
   + Allows duplicacy of elements.
   + It is an ordered collection.
   + Allows multiple nulls.
@@ -39,11 +39,11 @@
 
 ### **Array-list class**
 
-+ Written as **"arrayList".**
++ Written as **"ArrayList".**
 
 + It is an implementaion of "List interface".
 
-+ It creates and uses resizable array of type E and size 10 (supposed size) to keep elements.
++ It creates and uses resizable array of type "E" and size "10" to keep elements.
 
 <br>
 
@@ -87,13 +87,13 @@ ________________________________________________________________________________
 
 ### **Linked-list class**
 
-+ Written as **"linkedList".**
++ Written as **"LinkedList".**
 
-+ It is an implementaion of "list" and "deque" interfaces.
++ It is an implementaion of "List" and "Deque" interfaces.
 
-+ Means, it has properties of both list and deque interfaces.
++ Means, it has properties of both List and Deque interfaces.
 
-+ Few methods of deque interface implemented in this class are:
++ Few methods of Deque interface implemented in this class are:
   + public void addFirst(E element)
   + public void addLast(E element)
   + public E removeFirst()
@@ -138,3 +138,32 @@ ________________________________________________________________________________
 + Written as **"Vector".**
 
 + It is an implementaion of "List interface".
+
++ It is a legacy class introduced in JDK 1.0.
+
++ It creates and uses resizable array of type "E", and size "10" to keep elements like Array-list class.
+
++ Vector class is a synchronized class and Array-list class is unsynchronized class.
+
+<br>
+
+```
+  NOTE
+
+  • Legacy classes/interfaces were introduced in JDK 1.0
+    ‣ Vector class
+    ‣ Hash-table class
+    ‣ Enumeration interface used for iteration
+```
+
+<br>
+
+  #### **Stack class**
+
+  + It is a child of vector class.
+
+  + It has all methods of Vector class, and few own methods such as:
+    + public void push(E element)
+    + public E pop()
+    + public E peek()
+    + etc...
