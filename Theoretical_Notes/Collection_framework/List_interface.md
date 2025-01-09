@@ -48,6 +48,16 @@
 <br>
 
 ```
+  ARRAY-LIST CLASS OBJECT CREATION
+
+    ArrayList<String> obj = new ArrayList<String>();  // Using String class datatype
+    ArrayList<Integer> obj = new ArrayList<Integer>();  // Using Wrapper class datatype
+    ArrayList<E> obj = new ArrayList<E>();  // Using Generic datatype
+```
+
+<br>
+
+```
   HOMOGENEOUS LIST-COLLECTION EXAMPLE (can take only String type of arguments):
 
     ArrayList<String> list1 = new ArrayList<String> ();
@@ -112,6 +122,16 @@ ________________________________________________________________________________
 <br>
 
 ```
+  LINKED-LIST CLASS OBJECT CREATION
+
+    LinkedList<String> obj = new LinkedList<String>();  // Using String class datatype
+    LinkedList<Integer> obj = new LinkedList<Integer>();  // Using Wrapper class datatype
+    LinkedList<E> obj = new LinkedList<E>();  // Using Generic datatype
+```
+
+<br>
+
+```
   NOTE
 
     • "Linked-list class" and "linked-list data-structure" are two different concepts.
@@ -148,6 +168,16 @@ ________________________________________________________________________________
 <br>
 
 ```
+  VECTOR CLASS OBJECT CREATION
+
+    Vector<String> obj = new Vector<String>();  // Using String class datatype
+    Vector<Integer> obj = new Vector<Integer>();  // Using Wraper class datatype
+    Vector<E> obj = new Vector<E>();  // Using Generic datatype
+```
+
+<br>
+
+```
   NOTE
 
   • Legacy classes/interfaces were introduced in JDK 1.0
@@ -167,3 +197,13 @@ ________________________________________________________________________________
     + public E pop()
     + public E peek()
     + etc...
+
+<br>
+
+```
+  STACK CLASS OBJECT CREATION
+
+    Stack<String> obj = new Stack<String>();  // Using String class datatype
+    Stack<Integer> obj = new Stack<Integer>();  // Using Wrapper class datatype
+    Stack<E> obj = new Stack<E>();  // Using Generic datatype
+```
