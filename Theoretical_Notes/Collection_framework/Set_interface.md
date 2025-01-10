@@ -29,6 +29,8 @@
 
 + It creates an instance of HashMap class and uses this object to keep elements.
 
++ HashMap internally creates HashTable of size "60". 
+
 <br>
 
 ```
