@@ -76,3 +76,27 @@
   + But this method is over-ridden by String/Wrapper classes and it compares values of objects of these classes. 
 
   + If String/Integer/etc class has two different objects and value is same, then equal method will return true.
+
+<br>
+
+### **LinkedHashSet class**
+
++ It is an implementation of Set interface and child of HashSet class.
+
++ It maintains insertion order of elements.
+
+<br>
+
+### **TreeSet class**
+
++ It is an implementation of "SortedSet" interface.
+
++ SortedSet interface is a child of Set interface.
+
++ It doesn't allows "null".
+
++ It keeps/sorts elements in ascending or descending order.
+
++ TreeSet class invokes "compareTo" method of the Comparable interface to compare elements for sorting.
+
++ So, class of the element must have implementation of "compareTo" method.
