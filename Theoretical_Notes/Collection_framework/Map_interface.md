@@ -49,3 +49,21 @@
     • HashMap works on same principle of hashing as of HashTable.
     • The difference is, HashMap is unsynchronized, HashTable is synchronized.
 ```
+
+<br>
+
+### **LinkedHashMap class**
+
++ It is implementation of Map interface and child of HashMap class.
+
++ It maintains insertion order of entries.
+
+<br>
+
+### **TreeMap class**
+
++ It is implementation of SortedMap interface, and SortedMap interface is a child of Map interface.
+
++ It keeps entries in ascending or descending order of keys.
+
++ It invokes "compareTo" method of Comparable interface to compare keys.
