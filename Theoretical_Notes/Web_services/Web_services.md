@@ -81,3 +81,90 @@
       "price": 600
     }
 ```
+
+<br>
+
+### **@RestController annotation**
+
++ It is combination of following two annotations:
+  + @Controller annotation
+  + @ResponseBody annotation
+
++ In RESTful API, development this annotation is used to create controller class.
+
++ Methods of this controller will be called by API.
+
++ To create/define those methods, following annotations can be used:
+  + @GetMapping
+  + @PostMapping
+  + @DeleteMapping
+  + @PutMapping
+  + @PatchMapping
+  + etc...
+
++ These methods will generate and return response to the client application (front-end).
+
++ Return type of these methods should be "ResponseEntity class".
+
+<br>
+
+### **ResponseEntity class**
+
++ Methods of RESTful API create and return object of this class to the front controller as response body.
+
++ In this object API can keep both response status code (such as 200, 201, 404, etc) and reference of entity class object.
+
+<br>
+
+### **Response status codes**
+
++ HTTP response status codes indicate whether a specific HTTP request has been successfully completed.
+
++ Responses are grouped in five classes:
+  + Informational responses (100 - 199)
+  + Successful responses (200 - 299)
+  + Redirection messages (300 - 399)
+  + Client error responses (400 - 499)
+  + Server error responses (500 - 599)
+
++ One need to keep HTTP response status code in the object of "ResponseEntity" class.
+  + Constants can be used instead of direct values.
+
+<br>
+
+```
+  DECLARATION SYNTAX
+
+    ResponseEntity response = ResponseEntity.status(HttpStatus.OK).body(object);
+
+    ResponseEntity response = ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+
+    • Anyone syntax can be used in habit
+```
+
+<br>
+
+### **Types of API**
+
++ Following types of APIs can be build:
+  + GET APT (To get resource)
+  + POST API (To create resource)
+  + PUT API (To update resource as well as create resource)
+  + DELETE API (To delete resource)
+  + PATCH API (To update resource partially)
+  + etc...
+
++ Here, GETPOST, PUT, DELETE, PATCH are http request methods.
+
+<br>
+
+  #### **Difference between POST and PUT methods**
+
+  + POST method is used to create resource only.
+
+  + PUT method is used to update create resource if resource exists or create resource if resource doesn't exist.
+
+  + POST method is non-idempotent method.
+
+  + PUT method is idempotent method.
+  
