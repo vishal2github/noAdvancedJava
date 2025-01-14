@@ -1,4 +1,6 @@
-# DDL COMMANDS EXAMPLE
+# **DDL COMMANDS EXAMPLES**
+
+<br>
 
 ```
 COMMAND: create table empinfo(eid int primary key, firstname varchar(20), lastname varchar(20), department varchar(20), salary int);

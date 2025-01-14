@@ -1,4 +1,6 @@
-# DQL COMMANDS EXAMPLE
+# **DQL COMMANDS EXAMPLES**
+
+<br>
 
 ```
 COMMAND: select * from empinfo;

@@ -1,4 +1,6 @@
-# DML COMMANDS EXAMPLE
+# **DML COMMANDS EXAMPLES**
+
+<br>
 
 ```
 COMMAND: insert into empinfo(eid, firstname, lastname, department, salary) values(101, 'Amit', 'Singh', 'Sales', 60000);

@@ -1,4 +1,6 @@
-# COMMANDS EXAMPLE
+# **COMMANDS EXAMPLES**
+
+<br>
 
 ```
 COMMAND: show databases;
