@@ -1,6 +1,8 @@
-# **SQL (Structured Query Language) BASICS**
+# **SQL BASICS**
 
 <br>
+
+### **SQL (Structured Query Language)**
 
 + 'SQL' stands for Structured Query Language.
 
