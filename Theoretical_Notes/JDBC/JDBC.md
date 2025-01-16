@@ -39,7 +39,7 @@
 
 ### **Driver class**
 
-+ It is implementation of 'java.sql.Driver' interface.
++ It is implementation of 'java.sql.Driver' interface, under 'java.sql' package.
 
 + Driver interface has several methods, one of them is like:
 
@@ -49,14 +49,20 @@
     public Connection connect(String url, Properties p)
   
     Note:
-      > Implementation of this method is given inside driver class.
-      > Program will call this method to make connection with database server and to create connection object.
-      > Code to call this method is pre-defined.
+      • Implementation of this method is given inside driver class.
+      
+      • Program will call this method to make connection with database server
+        and to create connection object.
+      
+      • Code to call this method is pre-defined.
 
-      > This code is written inside following method of 'java.sql.DriverManager class:
-        >> public static Connection getConnection(String url, String username, String password)
-        >> DriverManager.getConnection("http://localhost:3306/jdbc10", "root", "mysql")
-        >> As we known, getConnection method will call connect method of driver class, so it must have reference of object of respected driver class.
+      • This code is written inside following method of 'java.sql.DriverManager class:
+        ‣ public static Connection getConnection(String url, String username, String password)
+        
+        ‣ DriverManager.getConnection("http://localhost:3306/jdbc10", "root", "mysql")
+        
+        ‣ As known, getConnection method will call connect method of driver class,
+          so it must have reference of object of respected driver class.
   ```
 
 <br>
