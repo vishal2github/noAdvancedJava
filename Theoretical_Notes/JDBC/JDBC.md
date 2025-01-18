@@ -29,11 +29,13 @@
 
 ### **JDBC steps**
 
-+ Loading driver class
-+ Creating connection object
-+ Creating statement object
-+ Executing SQL queries
-+ Closing connection
++ The java-program needs to follow some steps in order to perform some operation(s) via database:
+
+  + Loading Driver class
+  + Creating connection object
+  + Creating statement object
+  + Executing SQL queries
+  + Closing connection
 
 <br>
 
