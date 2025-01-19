@@ -90,18 +90,18 @@
 + Program will call methods of this interface to execute 'static' SQL queries (non-parameterized queries), i.e., the queries that don't require the user input.
 
 + Few methods under 'statement interface' are:
-  + public boolean execute(String query) **_(Call to execute SQL DDL query)_**
+  + public boolean execute(String query) **_[Invoke to execute SQL DDL query]_**
   
-  + public int executeUpdate(String query) **_(Call to execute SQL DML non-parameterized query)_**
+  + public int executeUpdate(String query) **_[Invoke to execute SQL DML non-parameterized query]_**
   
-  + public ResultSet executeQuery(String query) **_(Call to execute SQL DQL non-parameterized query)_**
+  + public ResultSet executeQuery(String query) **_[Invoke to execute SQL DQL non-parameterized query]_**
   
   + etc...
 
 <br>
 
 ```
-  STATEMENT INTERFACE SYNTAX:
+  STATEMENT INTERFACE SYNTAX
   
     Statement st = cn.createStatement();
 ```
@@ -122,7 +122,7 @@
 <br>
 
 ```
-  PREPARED-STATEMENT INTERFACE SYNTAX:
+  PREPARED-STATEMENT INTERFACE SYNTAX
   
     PreparedStatement ps = cn.preparedStatement("Write SQL query here!");
 ```
