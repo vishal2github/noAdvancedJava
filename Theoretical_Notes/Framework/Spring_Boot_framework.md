@@ -4,11 +4,13 @@
 
 ### **Spring boot**
 
-+ Spring boot framework is an extention of Spring framework.
++ Spring boot framework is known as an extention of Spring framework.
+
++ It has all the features of spring framework.
 
 + Developing applications using "Spring boot" framework is much easier than developing applications using spring framework.
 
-+ It has several useful features:
++ It has several useful and newer features:
   + Auto configuration
   + Starter dependencies
   + Embedded web server
