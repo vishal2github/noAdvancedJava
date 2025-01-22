@@ -59,6 +59,7 @@
       • Code to call this method is pre-defined.
 
       • This code is written inside following method of 'java.sql.DriverManager class:
+
         ‣ public static Connection getConnection(String url, String username, String password)
         
         ‣ DriverManager.getConnection("http://localhost:3306/jdbc10", "root", "mysql")
@@ -90,6 +91,7 @@
 + Program will call methods of this interface to execute 'static' SQL queries (non-parameterized queries), i.e., the queries that don't require the user input.
 
 + Few methods under 'statement interface' are:
+
   + public boolean execute(String query) **_[Invoke to execute SQL DDL query]_**
   
   + public int executeUpdate(String query) **_[Invoke to execute SQL DML non-parameterized query]_**
@@ -113,6 +115,7 @@
 + Program will call methods of this interface to execute 'dynamic' SQL queries (non-parameterized queries), i.e., the queries that don't require the user input.
 
 + Few methods under 'statement interface' are:
+
   + public int executeUpdate() **_(Call to execute SQL DML parameterized query)_**
   
   + public ResultSet executeQuery() **_(Call to execute SQL DQL parameterized query)_**
@@ -160,8 +163,9 @@
 + The program will fetch data from this object and show to the user.
 
 + **ResultSet object**
-  + Object of this interface is called 'resultset object'.
+
+  + Object of this interface is called 'ResultSet object'.
   
-  + Every resultset object maintains a cursor which is initially positioned just before the first record (at index -1).
+  + Every ResultSet object maintains a cursor which is initially positioned just before the first record _(at index -1)_.
   
-  + The program can call next() method of ResultSet interface to move cursor one position forward. Return type of next() method is 'boolean'.
+  + The program can call **next()** method of ResultSet interface to move cursor one position forward. Return type of next() method is boolean.
