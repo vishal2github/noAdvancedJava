@@ -181,11 +181,11 @@
 
 + **Note**
 
-  + Instead of implementing servlet interface, making a "servlet" by implementing "HttpServlet" class is a better option.
+  + Instead of implementing servlet interface, making a "servlet" by inheriting "HttpServlet" class is a better option.
   
     + The reason is, implementing Servlet class also requires to implement all five methods of Servlet class regarding of their need.
 
-    + But with implementing HttpServlet class would only required methods will be implemented.
+    + But with inheriting HttpServlet class would only required methods will be defined.
 
 <br>
 
