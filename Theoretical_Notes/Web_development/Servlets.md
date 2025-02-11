@@ -191,11 +191,9 @@
 
 ### **Service method calling**
 
-+ _Servlet interface service method (orignal service method)._
++ Servlet interface's **service()** method is considered as the orignal method.
 
-+ _HttpServlet class service method (duplicate service method)._
-
-<br>
++ HttpServlet class's **service()** method is considered as the duplicate method.
 
 + Web server will call original service method.
 
