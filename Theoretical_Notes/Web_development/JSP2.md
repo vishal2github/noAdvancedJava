@@ -1,4 +1,4 @@
-# **JSP**
+# **JSP - WEB LISTENER, APPLICATION OBJECT, AND SESSION OBJECT**
 
 <br>
 
@@ -25,3 +25,21 @@
 + In this object, the project can keep data or reference of object in the form of key-value pair.
 
 + Every JSP page and servlet has reference of this object.
+
+<br>
+
+### **Session object**
+
++ It is an object of **HttpSession** interface.
+
++ Web-server creates session object on initial request of the user/browser.
+
++ For each web browser, server creates a separate objects.
+
++ Every servlet and JSP page has reference of session object.
+
++ In session object, data can be kept in key-value pair.
+
++ Every servlet and JSP page has reference of session object.
+
++ Data kept into session object can be accessed by every JSP page and servlet.
