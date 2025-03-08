@@ -1,4 +1,4 @@
-# JAVA FRAMEWORK: HIBERNATE, JPA, AND ORM
+# **HIBERNATE**
 
 <br>
 
@@ -6,30 +6,54 @@
 
 + "ORM" is a framework tool.
 
-+ It stands for "Object Relational Mapping".
++ It stands for **Object Relational Mapping.**
 
 + ORM tool will perform followig tasks:
+
   + Persisting objects (Inserting data of object into table as a record)
-  + Deleting objects (Deleting records from the table)
-  + Updating objects (Updating records)
+  
+  + Deleting objects (Deleting record/records from the table)
+  
+  + Updating objects (Updating record/records)
+  
   + Returning objects (Selecting record/records)
+  
   + etc...
 
-+ ORM tool will call JDBC API to perform above task.
++ ORM tool will call JDBC-API to perform above tasks.
 
-+ "Hibernate" framework is one of the most widely used ORM tool.
++ **Hibernate** framework is one of the most widely used ORM tool.
 
 <br>
 
 ### **Persisting object**
 
-+ Saving states of the object permanently is called "persisting object".
++ Saving states of the object permanently is called **persisting object.**
 
 + As known, states of the object is kept temporarily into memory by program.
 
 <br>
 
+```
+  OBJECT'S ATTRIBUTE AND STATE EXAMPLE
+
+    public class Employee
+    {
+      private int eid;
+      private String name;
+    }
+
+    • In case of class, eid and name will be instance variables.
+
+    • With object's analogy, eid and name will be object's attributes,
+      and their values will be object's state.
+```
+
+<br>
+
 ### **Build tool**
+
++ Build tools or programs help create an executable application from the source code.
 
 + It's a software that automates the process of turning the code into a working program or application.
 
@@ -39,26 +63,77 @@
 
 + It also helps in unit testing code.
 
++ The build tool is needed for the following processes:
+
+  + Generating source code
+
+  + Generating documentation from the source code
+
+  + Compiling source code
+
+  + Packaging the compiled codes into JAR files
+
+  + Installing the packaged code in the local repository, server, or central repository.
+
 + Examples of build tool:
+  
   + **Maven** (for Java)
+  
   + **Gradle** (for Java, Kotlin, etc.)
+  
   + **Webpack** (for JavaScript/TypeScript)
+  
   + **Make** (for C/C++)
 
 <br>
 
 ### **Maven**
 
-+ It is a build tool.
++ An open-source build tool developed by "Apache group".
+
++ It is written in Java.
+
++ Based on **Project Object Model,** this tool has made java project's development easier, while developing reports, checks build, and testing automation setups.
+
++ Maven is chiefly used for Java-based projects, helping to download dependencies, which refers to the libraries or JAR files.
 
 + It performs several steps/tasks during application development:
+  
   + Creating directory sturcture of the project
-  + Managing project dependencies (external 'jar' files)
+  
+  + Managing project dependencies _(external JAR files)_
+  
   + Compiling source code of the project/application
+  
   + Creating partial unit testing code
+  
   + Creating deployable file
+  
   + Deploying project
+  
   + etc...
+
+<br>
+
+### **Pros of Maven**
+
++ Helps manage all the processes like building, documentation, and distribution in project management.
+
++ Simplifies project building process.
+
++ Increases performance of project and the building process.
+
++ Task of downloading JAR files and other dependencies is done automatically.
+
++ Easy to add new dependencies by writing the dependency code in POM file.
+
+<br>
+
+### **Cons of Maven**
+
++ Maven requires installation in working system and the Maven plug-in for the IDE.
+
++ If Maven code for an existing dependency is unavailable, one can't add that dependency using Maven itself.
 
 <br>
 
@@ -67,7 +142,7 @@
 + Hibernate is a widely used ORM tool.
 
 + Hibernate performs/handles several JDBC responsibilities:
-  + Loaing driver class
+  + Loading driver class
   + Creating connection
   + Creating statement object
   + Writing SQL queries
