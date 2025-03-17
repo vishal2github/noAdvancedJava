@@ -235,7 +235,7 @@
 
   #### **4. Creating hbm file**
 
-  + "HBM" stands for "Hibernate Mapping".
+  + **HBM** stands for **Hibernate Mapping.**
 
   + It's an XML file.
 
@@ -250,9 +250,10 @@
     + property
     + etc...
   
-  + This file is to be created inside "src" folder, which "xml" as an extension name.
+  + This file is to be created inside "src" folder, with **xml** as an extension name.
 
-  + Values for "hbm2ddl.auto" properties:
+  + Values for **hbm2ddl.auto** properties:
+
     + **update** _(If table doesn't exist, then SessionFactory will create table according to the mapping information)_
     
     + **create** _(If table doesn't exist, then SessionFactory will create table according to the mapping information. If table exists, then SessionFactory will drop that table and create table again)_
@@ -282,10 +283,15 @@
 ### **Interfaces of Hibernate**
 
 + There are several interfaces provided by hibernate like:
+  
   + SessionFactory interface
+  
   + Session interface
+  
   + Transaction interface
+  
   + Query interface
+  
   + etc...
 
 + Our program (respository class) will call methods of above interfaces to communicate with hibernate.
@@ -313,6 +319,7 @@
       c.configure("hibernate.cfg.xml");
       SessionFactory factory = c.buildSessionFactory();
 
+
     OR VIA METHOD CHAINING
 
       SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
@@ -327,7 +334,7 @@
   <br>
 
   ```
-    SYNTAX
+    SESSION OBJECT SYNTAX
 
       Session session = factory.openSession();
   ```
@@ -357,7 +364,7 @@
 
 ### **HQL**
 
-+ "HQL" stands for "Hibernate Query Language".
++ **HQL** stands for **Hibernate Query Language.**
 
 + As for hibernate, it hasn't methods for every query possible, hence, one needs to write custom query and give that query to the hibernate. This query is called HQL.
 
