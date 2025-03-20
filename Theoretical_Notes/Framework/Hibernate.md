@@ -89,7 +89,7 @@
 
 ### **Maven**
 
-+ An open-source build tool developed by "Apache group".
++ An open-source build tool developed by **Apache group.**
 
 + It is written in Java.
 
@@ -191,7 +191,7 @@
 
   #### **2. Configuring project dependencies into pom.xml file**
 
-  + All external jar files (that project need in order to perform jar file) are known as dependencies.
+  + All external jar files (that project need in order to perform jar file) are known as **dependencies.**
 
   + Can add these jar files manually in the project.
 
@@ -221,13 +221,16 @@
     + No argument constructor (non-parameterized or default constructor)
     + Contains "getters" and "setters"
     
+  <br>
+
   ```
     POJO/PERSISTENT/ENTITY CLASS SYNTAX
 
       public class Product
       {
-        // declare instance variables
-        // define getters and setters
+        // Declare instance variables
+        // Default constructor
+        // Define getters and setters
       }
   ```
 
@@ -241,7 +244,7 @@
 
   + In this file, we'll have to write mapping of persistent class with table.
 
-  + So that hibernate can perform SQL operations (such as, creating table, inserting records, deleting records, etc).
+  + So that hibernate can perform SQL operations **(such as, creating table, inserting records, deleting records, etc).**
   
   + We will use following tags provided by hibernate framework:
     + hibernate-mapping
@@ -250,7 +253,7 @@
     + property
     + etc...
   
-  + This file is to be created inside "src" folder, with **xml** as an extension name.
+  + This file is to be created inside **src** folder, with **xml** as an extension name.
 
   + Values for **hbm2ddl.auto** properties:
 
