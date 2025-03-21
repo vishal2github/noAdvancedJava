@@ -152,6 +152,19 @@
   + To put/retrieve the recoreds in the class object
   + etc...
 
++ Hence, conclusion, hibernate helps the program to perform database related operations, like:
+ 
+   + Creating table
+ 
+   + Record insertion in table
+
+   + Record deletion
+
+   + Record updation
+
+   + Record selection
+
+
 <br>
 
 ### **Hibernate usage steps in java project**
@@ -297,26 +310,26 @@
   
   + etc...
 
-+ Our program (respository class) will call methods of above interfaces to communicate with hibernate.
++ The program _(respository class)_ will call methods of above interfaces to communicate with hibernate.
 
 <br>
 
   #### **SessionFactory interface**
 
-  + Our repository class (program) will create an object of this interface.
+  + The repository class _(program)_ will create an object of this interface.
 
-  + DDL operation will be performed as soon as object of this interface will be created.
+  + **DDL operation** will be performed as soon as object of this interface will be created.
 
-  + Repository class can call buildSessionFactory() method of Configuation class to create this object.
+  + Repository class can call **buildSessionFactory()** method of Configuation class to create this object.
 
-  + Before calling buildSessionFactory() method call configure() method of Configuration class to load cfg file in memory.
+  + Before calling buildSessionFactory() method, call **configure()** method of Configuration class to load CFG file in memory.
 
-  + **Note:** If cfg file name is "hibernate.cgf.xml", then it isn't necessary to pass this file name inside "configure()" method. It is only passed if the file name is different.
+  + **Note:** If CFG file name is **hibernate.cgf.xml**, then it isn't necessary to pass this file name inside **configure()** method. It is only passed if the file name is different.
 
   <br>
 
   ```
-    SYNTAX
+    SESSIONFACTORY INTERFACE SYNTAX
 
       Configuration c = new Configuration();
       c.configure("hibernate.cfg.xml");
@@ -328,16 +341,18 @@
       SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
   ```
 
+  <br>
+
   #### **Session interface**
 
-  + Our repository class will call methods of this interface to perform DML (Persisting object, deleting object, updating object), and DQL (Select object) operation.
+  + The repository class _(program)_ will call methods of this interface to perform DML _(Persisting object, deleting object, updating object)_, and DQL _(Select object)_ operations.
 
-  + Call openSession() method of SessionFactory interface to create object of Session interface.
+  + Call **openSession()** method of SessionFactory interface to create object of Session interface.
   
   <br>
 
   ```
-    SESSION OBJECT SYNTAX
+    SESSION INTERFACE SYNTAX
 
       Session session = factory.openSession();
   ```
@@ -346,22 +361,31 @@
 
   #### **Transaction interface**
 
-  + Our repository class will call methods of this interface to begin and commit transaction.
+  + The repository class will call methods of this interface to begin and commit transaction.
 
-  + Our repository class will call begin() and commit() methods of this interface.
+  + The repository class will call **begin()** and **commit()** methods of this interface.
 
   + Every DML operation must be inside begin and commit transactions.
 
   <br>
 
   ```
-    SYNTAX
+    TRANSACTION INTERFACE SYNTAX
 
       Transaction tr = session.getTransaction();
       tr.begin();
       session.persist();
       session.save();
       tr.commit();
+  ```
+
+  <br>
+
+  ```
+    NOTE: persist() vs save() 
+
+      • persist() has return-type "void".
+      • save() has return-type "serializable".
   ```
 <br>
 
