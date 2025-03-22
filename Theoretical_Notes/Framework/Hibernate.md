@@ -387,6 +387,59 @@
       • persist() has return-type "void".
       • save() has return-type "serializable".
   ```
+
+<br>
+
+### **Transaction in SQL**
+
++ In SQL, **transaction** refers to a sequence of one or more SQL operations that are executed as a single unit of work.
+
++ For data consistency and integrity, it ensures that all changes made to the database within the transaction are:
+
+  + **Either fully completed** _(commited)_
+
+  + **Or, fully undone** _(rolled back)_
+
++ Transaction typically involves operations like **insert, update, delete, or select.**
+
++ Transaction follows the **ACID** properties:
+
+  + **Atomicity**
+
+    + Ensures a transaction is treated as a single "atomic" unit.
+
+    + Either all operations in transaction are executed, or none of them are (in failure condition).
+
+    + If a part of transaction fails, the entire transaction is rolled back.
+
+  + **Consistency**
+
+    + Database must transition from one consistent state to another after the transaction.
+
+    + Ensures database rules (constraints, triggers, etc.) aren't violated.
+
+  + **Isolation**
+
+    + Transactions are isolated from each other.
+
+    + Intermediate results of transaction aren't visible to other transactions until the transaction is committed.
+
+    + Ensures transactions don't interfere with each other and assures data consistency.
+
+  + **Durability**
+
+    + Once transaction is committed, it's effects are permanent, even if there's a system crash.
+
+    + Changes made by transaction are saved to database.
+
++ There are majorily three transaction control statements:
+
+  + **Begin:** Marks beginning of a transaction.
+
+  + **Commit:** Saves the changes made during the transaction to database.
+
+  + **Rollback:** Reverts any changes made during the transaction if an error occurs or if the transaction is explicitly canceled.
+
 <br>
 
 ### **HQL**
@@ -397,18 +450,18 @@
 
 + One can write and use this query for select, delete, and update tasks.
 
-+ In this query, one has to write "Persistent" class name in place of table name.
++ In this query, one has to write **Persistent** class name in place of table name.
 
 + One has to write instance variable name in place of column name.
 
-+ One has to pass this query to the createQuery() method of Session interface.
++ One has to pass this query to the **createQuery()** method of Session interface.
 
-+ The createQurery() method will create an object of "org.hinbernate.query.Query" interface and store the passed query into this object and return reference of this object.
++ The createQurery() method will create an object of **org.hibernate.query.Query** interface and store the passed query into this object and return reference of this object.
 
 <br>
 
 ```
-  SYNTAX
+  QUERY INTERFACE SYNTAX
 
     Query<Employee> query = session.createQuery("from Employee", Employee.class);
     List<Employee> employeeList = query.list();
@@ -421,7 +474,9 @@
 + In hibernate, one need to map the relationships of "Inheritance" and/or "Association".
 
 + One has following two types of mapping between entities (persistent classes) here:
+  
   + Inheritance
+  
   + Association
 
 ```
@@ -467,9 +522,13 @@
 + This mapping is required when object of one entity class will be used by other entity classes.
 
 + There are four types of association between objects/instances:
+  
   + One-to-one (Identity-Person)
+  
   + One-to-many (User-SIMS)
+  
   + Many-to-one (SIMS-User)
+  
   + Many-to-many (Teachers-Students, Students-Courses)
 
 <br>
