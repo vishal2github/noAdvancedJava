@@ -473,11 +473,13 @@
 
 + In hibernate, one need to map the relationships of "Inheritance" and/or "Association".
 
-+ One has following two types of mapping between entities (persistent classes) here:
++ Two types of mapping between entities (persistent classes) are:
   
-  + Inheritance
+  + **Inheritance**
   
-  + Association
+  + **Association**
+
+<br>
 
 ```
   INHERITANCE (EXTENDS)
@@ -493,7 +495,7 @@
     }
 
   Note: Here, class "BB" is a sub-class of class "AA".
-        (IS A RELATIONSHIP FACTOR).
+        ("IS A" RELATIONSHIP FACTOR).
 ```
 
 <br>
@@ -512,7 +514,7 @@
     }
   
   Note: Here, object of class "BB" has an object of class "AA".
-        (HAS A RELATIONSHIP FACTOR)
+        ("HAS A" RELATIONSHIP FACTOR)
 ```
 
 <br>
@@ -523,19 +525,22 @@
 
 + There are four types of association between objects/instances:
   
-  + One-to-one (Identity-Person)
+  + **One-to-one** _(Identity-Person)_
   
-  + One-to-many (User-SIMS)
+  + **One-to-many** _(User-SIMS)_
   
-  + Many-to-one (SIMS-User)
+  + **Many-to-one** _(SIMS-User)_
   
-  + Many-to-many (Teachers-Students, Students-Courses)
+  + **Many-to-many** _(Teachers-Students, Students-Courses)_
 
 <br>
 
 ### **States of object in hibernate**
 
 + Transient state
+
 + Persistent state
+
 + Detatched state
+
 + Removed state
