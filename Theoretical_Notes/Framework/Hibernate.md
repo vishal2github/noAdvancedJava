@@ -537,10 +537,84 @@
 
 ### **States of object in hibernate**
 
-+ Transient state
+  #### Transient state
 
-+ Persistent state
+  + Transient state of an entity is when it is instantiated using the **new** keyword, but isn't yet associated with Hibernate session or database.
 
-+ Detatched state
+  + The object isn't yet tracked by Hibernate, and it doesn't have corresponding record in database.
 
-+ Removed state
+  + Entity in this state is just plain Java object and doesn't have an identity that is recognized by Hibernate.
+
+  <br>
+
+  ```
+    TRANSIENT STATE EXAMPLE
+
+      Employee emp = new Employee();
+      emp.setName("Alex Cooper");
+  ```
+
+  <br>
+
+  #### Persistent state
+
+  + Entity enters persistent state when associated with a Hibernate session and mapped to a record in database.
+
+  + Any changes made to entity in this state are automatically synchronized with the database when the session is flushed _(e.g., when transaction is committed)_.
+
+  + The object has an identifier that matches a record in the database.
+
+  + Hibernate tracks the changes made to the object in this state.
+
+  <br>
+
+   ```
+    PERSISTENT STATE EXAMPLE
+
+      Session session = sessionFactory.openSession();
+      session.beginTransaction();
+      session.save(emp); // Now the entity is persistent
+      session.getTransaction().commit();
+      session.close();
+  ```
+
+  <br>
+
+  #### Detatched state
+
+  + Entity becomes detached when the Hibernate session that was managing it is closed or the entity is evicted from the session cache.
+
+  + Object is no longer associated with session, but still has a representation of its identity _(e.g., primary key)_ and can be reattached to new session.
+
+  + The changes made to the object in detached state aren't automatically synchronized with database unless entity is reattached to a session.
+
+  <br>
+
+  ```
+    DETATCHED STATE EXAMPLE
+
+      session.close();
+      
+      // The session is closed.
+      // Entity becomes detached.
+  ```
+
+  <br>
+  
+  #### Removed state
+
+  + Entity is in removed state when it is marked for deletion, usually using **session.delete()**.
+
+  + Object is still in persistent state until session is flushed, at which point it is removed from database.
+
+  + After deletion, entity is no longer tracked by Hibernate.
+
+  <br>
+
+  ```
+    REMOVED STATE EXAMPLE
+
+      session.delete(emp);
+
+      // Entity is marked for deletion
+  ```
