@@ -618,3 +618,23 @@
 
       // Entity is marked for deletion
   ```
+
+<br>
+
+### **Inheritance between entities**
+
++ The following strategies are required for mapping purpose of entities in inheritance:
+
+  + Single table
+
+  + Joined
+
+  + Table per class
+
+<br>
+
+  #### Single table strategy
+
+  + All the objects will be persisted into a single table, that will be a **parent-class table**.
+
+  + Once extra column will be added known as **Discriminator column**, values under which will be used to check which object is which.
