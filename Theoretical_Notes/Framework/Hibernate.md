@@ -631,10 +631,224 @@
 
   + Table per class
 
-<br>
+  <br>
 
-  #### Single table strategy
+  #### **Single table strategy**
 
   + All the objects will be persisted into a single table, that will be a **parent-class table**.
 
   + Once extra column will be added known as **Discriminator column**, values under which will be used to check which object is which.
+
+  <br>
+
+  #### **Joined table strategy**
+
+  <br>
+
+  #### **Table per class**
+
+<br>
+
+### **Hibernate caching**
+
++ A mechanicsm that helps improve database operations performance by reducing number of database queries needed to be executed.
+
++ Stores results of database queries in memory, so upcoming requests for same data can be retrieved from cache rather than querying database again.
+
++ Hibernate caching is divided into two types:
+
+  + First-level cache
+
+  + Second-level cache
+
+<br>
+
+#### **First-level cache (L1 cache)**
+
++ **Scope**
+
+  + The first-level cache is associated with the session object in Hibernate.
+
+  + This cache is **enabled by default** and can't be disabled.
+
++ **Life cycle**
+
+  + It exists for the duration of session.
+
+  + Once session is closed, cache is cleared.
+
++ **Caching scope**
+
+  + It caches the entities and collections loaded/saved within session.
+
+  + If an object is already loaded in session, any upcoming request for same object will retrieve it from session cache _(first-level cache)_ instead of querying database.
+
++ **Use case**
+
+  + Useful when multiple queries exist during a single transaction that retrieve same data.
+
+<br>
+
+#### **Second-level cache (L2 cache)**
+
++ **Scope**
+
+  + More global and can be shared across different sessions.
+
+  + Typically used to cache data across multiple transactions and sessions.
+
++ **Life cycle**
+
+  + It is tied to **SessionFactory** and is independent of session.
+
+  + Persists beyond the duration of session and can hold data across different sessions.
+
++ **Cache providers**
+
+  + Hibernate allows third-party caching providers _(Ehcache, Infinispan, OSCache, Redis, etc...)_ implement second-level cache.
+
++ **Use case**
+
+  + Particularly useful for read-heavy applications where same data is requested across multiple sessions.
+
+<br>
+
+#### **Query cache (Optional)**
+
++ **Scope**
+
+  + A subset of second-level cache.
+
+  + Stores results of specific queries, so next time same query is executed, it can retrieve result from cache instead of hitting database.
+
++ **Use case**
+
+  + Beneficial for applications where same queries are often run with identical parameters and return same results.
+
+<br>
+
+### **Configuration of hibernate caching**
+
+  #### **First-level cache (L1)**
+
+  + Enabled by default in Hibernate and configuration isn't required.
+
+  <br>
+
+  #### **Second-level cache (L2)**
+
+  + **Enable cache:** In **hibernate.cfg.xml**, the second-level cache can be enabled by adding following property:
+
+  <br>
+
+  ```
+    L2 CACHE ENABLING
+
+      <property name="hibernate.cache.use_second_level_cache">true</property>d
+      <property name="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
+  ```
+
+  + **Configure cache regions:** You can specify cache regions for different entities, collections, etc. For example, to cache an entity:
+
+  <br>
+
+  ```
+    L2 CACHE REGION CONFIGURATION
+
+      <hibernate-mapping>
+        <class name="com.example.Entity" table="entity_table">
+          <cache usage="read-write" />
+          // other mappings...
+        </class>
+      </hibernate-mapping>
+  ```
+
+  <br>
+
+  + **Cache providers:** One needs to choose a caching provider like **Ehcache** or **Infinispan**. For **Ehcache,** one will typically add following dependency in **pom.xml** _(for Maven)_ file:
+
+  <br>
+
+  ```
+    CACHE PROVIDERS DEPENDENCY ADDITION
+
+      <dependency>
+        <groupId>net.sf.ehcache</groupId>
+        <artifactId>ehcache</artifactId>
+        <version>2.x.x</version>
+      </dependency>
+
+    
+    NOTE
+    
+      • "ehcache.xml" configuration file will also be needed
+        to configure caching behavior.
+  ```
+
+  <br>
+
+  #### **Cache usage options**
+
+  + **read-write** 
+  
+    + Data will be cached, and cache will be update on both read and write operations.
+
+  + **read-only** 
+  
+    + Data is cached only when it is read, updates won't be cached.
+
+  + **nonstrict-read-write** 
+  
+    + More relaxed form of **read-write** mode that doesn't guarantee cache consistency.
+
+  + **transactional** 
+  
+    + Requires transactional cache supporst to guarantee cache consistency during concurrent transactions.
+
+<br>
+
+### **Hibernate caching best practices**
+
++ **Cache fine-grained data**
+
+  + Cache entities and collections that are read frequently and don't change often.
+
++ **Eviction policies**
+
+  + Defined cache eviction policies carefully to ensure that stale data doesn't remain in cache.
+
++ **Cache synchronization**
+
+  + If application is multi-node _(distributed),_ ensure proper synchronization between nodes to keep the cache consistent.
+
++ **Use query cache selectively**
+
+  + Query cache can provide great performance benefits.
+
+  + But, it should only be used where appropriate, like for repeated queries with same parameters.
+
++ **Performance testing**
+
+  + Always profile application to ensure caching is providing expected performance improvements.
+
+<br>
+
+### **Hibernate logging**
+
++ It is a crucial feature for:
+
+  + **Debugging**
+
+    + Identigying issues such as incorrect SQL, session problems, or transaction failures.
+
+  + **Performance monitoring**
+
+    + Analyzing query execution times, database hits/misses, and optimizing application performance.
+  
+  + **Data integrity**
+
+    + Ensuring that correct data is being passed and persisted as expected.
+
++ By loging important events and SQL queries, one can track how Hibernate interacts with database and diagnose issues such as performance bottlenecks, incorrect queries, or data inconsistencies.
+
++ By adjusting loggin levels and enabling different loggers, Hibernate's logging can be tailored to individual's needs, ensuring better visibility into application's behavior.
