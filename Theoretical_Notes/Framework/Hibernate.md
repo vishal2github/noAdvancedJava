@@ -835,6 +835,10 @@
 
 ### **Hibernate logging**
 
++ Hibernate logging helps developers monitor and troubleshoot database interactions in their application.
+
++ It's like having a detailed logbook that shows every step Hibernate takes when it talks to the database.
+
 + It is a crucial feature for:
 
   + **Debugging**
@@ -852,3 +856,23 @@
 + By loging important events and SQL queries, one can track how Hibernate interacts with database and diagnose issues such as performance bottlenecks, incorrect queries, or data inconsistencies.
 
 + By adjusting loggin levels and enabling different loggers, Hibernate's logging can be tailored to individual's needs, ensuring better visibility into application's behavior.
+
++ Few things Hibernate logging typically records:
+
+  + **SQL queries:** Which SQL commands Hibernate is sending to the database.
+
+  + **Transaction details:** Information about when a transaction starts, commits, or rolls back.
+
+  + **Errors:** Any problems that occur, such as database connection issues or query failures.
+
+  + **Performance data:** How long certain operations are taking.
+
++ Logging is typically done using popular logging frameworks like **SLF4J** and **Logback** or **Log4J.**
+
++ **Configuration steps**
+
+  + **Set up logging** with SLF4J and Logback.
+
+  + **Configure Hibernate logging** for SQL and transaction details in **logback.xml.**
+
+  + **Run simple Hibernate code** to see the logging in action.
