@@ -8,21 +8,34 @@
 
 + It's a lightweight framework.
 
-+ It has several modules. Like:
++ It has several modules:
+  
   + Spring core
+  
   + Spring context
+  
   + Spring web
-  + Spring AOP (Aspect Oriented Programming)
-  + Spring ORM (Object Relational Mapping)
-  + Spring OXM (Object XML Mapping)
+  
+  + Spring AOP **(Aspect Oriented Programming)**
+  
+  + Spring ORM **(Object Relational Mapping)**
+  
+  + Spring OXM **(Object XML Mapping)**
+  
   + Spring JDBC
-  + Spring JMS (Java Messaging Service)
+  
+  + Spring JMS **(Java Messaging Service)**
+  
   + Spring test
+  
   + etc...
 
-+ One need to configure dependency of the module(s) in POM.xml file.
++ One need to configure dependency of the module(s) in **POM.xml** file.
+  
   + groupId
+  
   + artifactId
+  
   + version
 
 <br>
@@ -30,8 +43,11 @@
 ### **Maven and gradle configuration files**
 
 + **Using Maven**
+  
   + File used "pom.xml"
+  
   + Data kept in xml format
+  
   + Tag and attributes
 
 ```
@@ -58,8 +74,11 @@
 <br>
 
 + **Using Gradle**
+  
   + File used "build.gradle"
+  
   + Data kept in json format
+  
   + Key-value pair
 
 ```
@@ -105,11 +124,17 @@
 + Objects created by spring framework for our program are known as spring beans.
 
 + Life cycle of these beans will be managed by spring framework:
+  
   + Creating beans
+  
   + Keeping reference of the beans
+  
   + Initializing beans
+  
   + Setting scope of the beans
+  
   + Injecting beans (dependency injection)
+  
   + etc...
 
 + IOC container performs above tasks for the program.
@@ -123,7 +148,9 @@
 + As, life cycle of spring beans are managed by IOC container.
 
 + Spring framework provices following two IOC container:
+  
   + BeanFactory container
+  
   + ApplicationContext container
 
 <br>
@@ -233,10 +260,15 @@
 ### **Scopes of bean**
 
 + Scopes of the bean can be as follow:
+  
   + Singleton scope
+  
   + Prototype scope
+  
   + Request scope
+  
   + Session scope
+  
   + Global-session scope
 
   <br>
@@ -252,8 +284,11 @@
   + Singleton scope's instantiation is eager.
 
   + This design pattern helps to create a singleton class.
+    
     + Singleton class has "private static instance/field", ensures that only one instace is maintained throughout the application.
+    
     + Singleton class has "private constructor", prevents external code from creating multiple instances.
+    
     + Singleton class has "public static method", ensures controlled access to the single instance.
 
   <br>
@@ -269,14 +304,21 @@
 ### **Configuration types**
 
 + Spring framework allows following three configuration types:
+  
   + XML based configuration
+  
   + Annotation based configuration
+  
   + Java-code based configuration
 
 + Four stereotype annotations:
+  
   + Service annotation
+  
   + Component annotation
+  
   + Repository annotation
+  
   + Controller annotation
 
 <br>
@@ -286,10 +328,15 @@
 + Purpose of annotation is to provide information to the framework, upon which they're applied.
 
 + Annotation can be applied on:
+  
   + Class level (The information about class)
+  
   + Method level (The information about method)
+  
   + Argument level (The information about argument)
+  
   + Constructor level (The information about constructor)
+  
   + Instance-variable level (The information about instance-variable)
 
 <br>
@@ -299,8 +346,11 @@
 + Injecting dependency automatically is called autowiring.
 
 + One need to set one of the following autowiring mode:
+  
   + byName mode
+  
   + byType mode
+  
   + constructor mode
 
 <br>
@@ -324,4 +374,3 @@
   + This should be set when single implementation of dependency is configured.
 
   + If multiple matching beans will be available then exception will be created and thrown.
- 

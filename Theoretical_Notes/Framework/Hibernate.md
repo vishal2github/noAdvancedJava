@@ -803,7 +803,7 @@
 
   + **transactional** 
   
-    + Requires transactional cache supporst to guarantee cache consistency during concurrent transactions.
+    + Requires transactional cache supports to guarantee cache consistency during concurrent transactions.
 
 <br>
 
