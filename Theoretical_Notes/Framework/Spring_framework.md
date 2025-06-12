@@ -105,15 +105,25 @@
 
 ### **IOC**
 
-+ It stands for "Inversion of Control".
++ It stands for **Inversion of Control**.
 
 + Spring framework is based on IOC principle.
+
++ IOC is a design principle where instead of program controlling how objects are created and used, the control is given to a framework _(like Spring)_ to manage the objects.
+
++ IoC makes code more organized and flexible by allowing Spring to manage how objects are created and connected.
+
++ IoC is implemented through a concept called **Dependency Injection (DI)**.
+
+  + Spring manages objects _(called beans)_.
+
+  + Spring creates these objects and gives them to the parts of program that need them.
 
 <br>
 
 ### **Object dependencies**
 
-+ There could be a "tight coupling" as well as "loose coupling" between object dependencies.
++ There could be a **tight coupling** as well as **loose coupling** between object dependencies.
 
 + **Scenario example:** If methods of class "AA" will be called by methods of class "BB", then one can say obejct of class "AA" will be dependency of object of class "BB".
 
