@@ -207,7 +207,7 @@
 
 ### **XSD file**
 
-+ "xsd" stands for 'XML Schema Document".
++ It stands for **XML Schema Document**"**.
 
 + This file contains XML tags.
 
@@ -289,17 +289,17 @@
 
   + In this case the class of the beans will be instantiated only once during the project's lifecycle.
 
-  + Singleton is also a design pattern.
+  + Singleton is also a **design pattern**.
 
   + Singleton scope's instantiation is eager.
 
   + This design pattern helps to create a singleton class.
     
-    + Singleton class has "private static instance/field", ensures that only one instace is maintained throughout the application.
+    + Singleton class has **private static instance/field**, ensures that only one instace is maintained throughout the application.
     
-    + Singleton class has "private constructor", prevents external code from creating multiple instances.
+    + Singleton class has **private constructor**, prevents external code from creating multiple instances.
     
-    + Singleton class has "public static method", ensures controlled access to the single instance.
+    + Singleton class has **public static method**, ensures controlled access to the single instance.
 
   <br>
 
@@ -308,6 +308,66 @@
   + In this case, beans will be created each time program will call getBean() method or program will demand bean.
 
   + Prototype scope's instantiation is lazy.
+
+<br>
+
+### **Singleton class**
+
++ Is a design pattern that ensures a class has **only one instance** and provides a **global point of access** to that instance.
+
++ Useful when exactly one object is needed to coordinate actions across the system, like:
+
+  + Managing a connection pool
+
+  + Logging system
+
+  + Configuration settings
+
+  + etc...
+
+  <br>
+
+  #### **Characterstics**
+
+  + **Single instance:** Ensures that only one instance of class exists.
+
+  + **Global access:** Provides a global point of access to that instance.
+
+  + **Lazy initialization:** The instance is created when it's first needed, rather than at startup (though not mandatory).
+
+  + **Thread-safety:** If application is multithreaded, Singleton class should be thread-safe to avoid multiple threads creating multiple instances.
+
+  <br>
+
+  #### **Implementation**
+
+  + There are several ways to implement a Singleton:
+
+    + Eager initialization _(Simple)_
+
+    + Lazy initialization _(Thread-safe)_
+
+    + Bill Pugh Singleton _(Recommended)_
+  
+  <br>
+
+  #### **Why use a Singleton?**
+
+  + **Shared resources:** When a system needs a shared resource, like database connection/configuration settings, having one instance avoids inconsistency.
+
+  + **Memory conservation:** Since only one instance is created, memory resources are conserved.
+
+  + **Global access:** Singleton provides a way to access this instance from anywhere in program.
+
+  <br>
+
+  #### **Use cases for Singleton**
+
+  + **Logging:** A logging class where there's only need of one instance to handle all logs.
+
+  + **Database connections:** A connection pool for managing multiple database connections.
+
+  + **Configuration:** A configuration manager that loads settings once and shares them globally.
 
 <br>
 
