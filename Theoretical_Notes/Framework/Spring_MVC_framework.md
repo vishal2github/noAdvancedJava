@@ -14,9 +14,9 @@
 
 ### **MVC**
 
-+ "MVC" stands for "Model-view-controller".
++ Stands for **Model-View-Controller**.
 
-+ It is a design pattern.
++ It is a **design pattern**.
 
 + It is used to separate presentation layer from business layer as well as data layer.
 
@@ -51,10 +51,15 @@
 + One can use HTML, CSS, and JavaScript to create design of the view.
 
 + To make it dynamic, one of the following template engines will be used:
+  
   + JSP engine
+  
   + Thymeleaf engine
+  
   + Freemarker engine
+  
   + Velocity engine
+  
   + etc...
 
 + Dependency of the engine must be configured into the project.
@@ -66,15 +71,18 @@
 + It plays vital role in MVC based project.
 
 + Main roles of controller are:
+  
   + Handle HTTP request
+  
   + Generate HTTP response
+  
   + Send response to the browser
 
 + Front controller will call controller.
 
 + Spring-MVC project will have only one front controller, but multiple controllers.
 
-+ Class of the controller must be annotated by using "@Controller" annotation.
++ Class of the controller must be annotated by using **@Controller** annotation.
 
 + Methods inside controller are known as handlers.
 
@@ -82,7 +90,7 @@
 
 + We need to map handlers/methods with each HTTP request.
 
-+ To map handlers with HTTP request, one can use "@RequestMapping" annotation.
++ To map handlers with HTTP request, one can use **@RequestMapping** annotation.
 
 <br>
 
@@ -101,7 +109,9 @@
 ### **Configuration files**
 
 + Two configuration files:
+  
   + web.xml file
+  
   + spring-servlet.xml file
 
 <br>
@@ -140,35 +150,48 @@
   + In this file, one will have to configure the project.
 
   + One can configure follwings in project like:
+        
     + Base package
+    
     + CSS file location
+    
     + JS file location
+    
     + Image file location
+    
     + viewresolver
+    
     + beans
+    
     + etc...
 
 <br>
 
 ### **Front controller**
 
-+ Every Spring-MVC project has a "front controller".
++ Every Spring-MVC project has a **front controller**.
 
 + Front controller is responsible to perform following tasks:
+  
   + Creating model object
+  
   + Calling methods of controller
+  
   + Accepting return value from methods of controller
+  
   + Resolving views
+  
   + Executing views
+  
   + etc...
 
 + Front controller will be called by web-server.
 
-+ In Spring-MVC project, front controller is a servlet with class name "DispatcherServlet".
++ In Spring-MVC project, front controller is a servlet with class name **DispatcherServlet**.
 
 + Every request and response goes through front controller.
 
-+ Front controller must be configured in "web.xml" file.
++ Front controller must be configured in **web.xml** file.
 
 + Web-server calls it and passes request and data to the front controller.
 
@@ -178,17 +201,26 @@
 
 + One can use hibernate in project to perform CRUD operation.
 
-+ Following dependencies must be configured in "pom.xml" file:
++ Following dependencies must be configured in **pom.xml** file:
+  
   + Spring-jdbc
+  
   + Spring-orm
+  
   + Hibernate-core
+  
   + Hibernate-c3p0
+  
   + Mysql-connector
 
 + Create following packages in project's base package:
+  
   + Controller
+  
   + Service
+  
   + Repository
+  
   + Entity
 
 <br>
@@ -198,7 +230,9 @@
 + ViewResolver is an interface.
 
 + Object of ViewResolver interface holds two values:
+  
   + Location of the view as prefix property
+  
   + Extention of the view as suffix property
 
 + Implementation of this interface must be configured manually either using xml or using java-code.
@@ -222,7 +256,7 @@
 
 <br>
 
-+ IOC container will create object of "InternalResourceViewResolver" class and give reference of object of this class to the front controller.
++ IOC container will create object of **InternalResourceViewResolver** class and give reference of object of this class to the front controller.
 
 + Front controller will get prefix value from this object and concatenate prefix value before the name of view.
 
@@ -232,23 +266,34 @@
 
 ### **JSTL**
 
-+ It stands for "JSP Standard Tag Library".
++ It stands for **JSP Standard Tag Library**.
 
 + By using tags of this library, one can write presentation logic code inside JSP page without writing single line of java-code.
 
 + Following commands can be written using these tags:
+  
   + Command to create variable
+  
   + Command to apply condition
+  
   + Command to execute loop
+  
   + Command to perform string functions
+  
   + Command to call JDBC-API
+  
   + etc...
 
 + Following five liraries are provided in JSTL:
+  
   + JSP core library (http://java.sun.com/jsp/jstl/core)
+  
   + JSP formatting library (http://java.sun.com/jsp/jstl/fmt)
+  
   + JSP functions library (http://java.sun.com/jsp/jstl/functions)
+  
   + JSP xml library  (http://java.sun.com/jsp/jstl/xml)
+  
   + JSP sql library (http://java.sun.com/jsp/jstl/sql)
 
 + Along with JSTL, the EL (Expression Language) in JSP pages will also be used.
@@ -257,7 +302,7 @@
 
 ### **Deployment descriptor file**
 
-+ Name of this file must be "web.xml".
++ Name of this file must be **web.xml**.
 
 + It specifies how the web server uses the application's classes, resources, and configuration to serve web/http requests.
 
@@ -265,7 +310,7 @@
 
 + In case of Spring-MVC project, the front controller will be configured (DispatcherServlet) inside this file and with many more configurations.
 
-+ This file must be kept inside "WEB-INF" folder.
++ This file must be kept inside **WEB-INF** folder.
 
 <br>
 
@@ -273,8 +318,8 @@
 
   + Name of second configuration file should be name of servlet (in web.xml file) -serblet.xml.
 
-  + If name of servlet is "abc", then this file name should be abc-servlet.xml.
+  + If name of servlet is **abc**, then this file name should be **abc-servlet.xml**.
 
-  + If name of servlet is "spring", then this file name should be spring-servlet.xml.
+  + If name of servlet is **spring**, then this file name should be **spring-servlet.xml**.
 
 <br>
