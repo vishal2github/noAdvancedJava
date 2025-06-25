@@ -223,6 +223,10 @@
   
   + Entity
 
++ Order of packages doesn't matter, but order of classes does matter.
+
+  + Entity class → Service class → Repository class → Controller class
+
 <br>
 
 ### **ViewResolver interface**
